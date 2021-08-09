@@ -1,0 +1,72 @@
+.container {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  height: 100vh;
+  overflow-x: hidden;
+}
+.content {
+  background: linear-gradient(
+      180deg,
+      rgba(38, 50, 56, 0.6) 0%,
+      rgba(196, 196, 196, 0) 100%
+    ),
+    url("../../assets/images/squarelanding.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+.logo {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 53.27px;
+  height: 53.27px;
+  left: 48.37px;
+  top: 43.87px;
+  background: #ffffff;
+  border-radius: 50%;
+}
+.imgLogo {
+  width: 58px;
+  height: 41.41px;
+}
+.content-block {
+  height: 47px;
+  margin-top: 470px;
+  margin-left: 48px;
+  font-style: normal;
+}
+.content-block > h2 {
+  font-size: 26px;
+  font-weight: 800;
+
+  margin-bottom: 12px;
+}
+
+.content-block p {
+  padding-right: 15px;
+  line-height: 37px;
+  font-weight: 400;
+}
+.socials {
+  width: 110px;
+  position: absolute;
+  bottom: 47px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.socials-logo-fb {
+  width: 10.25px;
+  height: 21px;
+}
+.socials-logo-ln {
+  width: 19.88px;
+  height: 14px;
+}
+.socials-logo-tw {
+  width: 21px;
+  height: 17px;
+}

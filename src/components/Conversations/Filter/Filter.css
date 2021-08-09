@@ -1,0 +1,38 @@
+.filter {
+  height: 65px;
+  border-bottom: 1px solid #eaedf3;
+}
+
+.filter-icon {
+  position: fixed;
+  top: 24px;
+  left: 273px;
+}
+.filter-description {
+  font-family: "Axiforma Regular";
+  position: fixed;
+  top: 20px;
+  left: 302px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #a0aec0;
+  letter-spacing: 0.03em;
+}
+.filter-description-count {
+  position: fixed;
+  top: 23px;
+  left: 401px;
+  height: 16.3px;
+  font-family: "Axiforma Regular";
+  font-size: 10px;
+  padding: 0.1px 3px;
+  color: rgba(10, 2, 36, 0.4);
+  background: rgba(160, 174, 192, 0.3);
+  border: 1px solid #a0aec0;
+  border-radius: 7.63636px;
+}
+.filter-options {
+  position: fixed;
+  top: 29px;
+  left: 435px;
+}

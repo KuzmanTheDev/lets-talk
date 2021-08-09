@@ -1,0 +1,12 @@
+.confirmation-block {
+  height: 655px;
+  margin-top: 60px;
+  margin-left: 94px;
+}
+/* img {
+  width: 121px;
+  margin-bottom: 50px;
+} */
+.confirmation-block > p {
+  margin-top: 18px;
+}

@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Axiforma Regular";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: "Axiforma Regular";
+  src: url("./fonts/Axiforma-Regular.eot");
+  src: url("./fonts/Axiforma-Regular.eot") format("embedded-opentype"),
+    url("./fonts/Axiforma-Regular.woff") format("woff"),
+    url("./fonts/Axiforma-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

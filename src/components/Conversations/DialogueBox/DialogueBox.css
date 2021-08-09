@@ -1,0 +1,14 @@
+.dialogue-box {
+  height: 92vh;
+  display: flex;
+  align-items: center;
+  background: #f8fafd;
+  border-top: 1px solid #eaedf3;
+  border-left: 1px solid #eaedf3;
+}
+.dialogue-box > img {
+  width: 150px;
+  height: 150px;
+  margin-left: calc(50% / 2);
+  margin-right: calc(50% / 2);
+}

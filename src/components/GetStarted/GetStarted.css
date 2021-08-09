@@ -1,0 +1,68 @@
+.header {
+  height: 74px;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 4.438rem;
+  border-bottom: 1px solid rgb(231, 230, 230);
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 152.5%;
+  color: rgba(30, 17, 71, 0.5);
+}
+.header > p {
+  position: absolute;
+  top: 23px;
+  margin: 0;
+}
+
+.welcome-block {
+  height: 655px;
+  margin-top: 60px;
+  margin-left: 94px;
+}
+.welcome-block > p {
+  margin-top: 18px;
+  width: 55%;
+}
+.role-block {
+  display: flex;
+  flex-direction: row;
+  margin-top: 47px;
+}
+.role {
+  display: flex;
+  flex-direction: column;
+  margin-right: 40px;
+  align-items: center;
+}
+.role-square:hover {
+  background: rgba(154, 34, 25, 0.1);
+  cursor: pointer;
+  /* color: #0054fe; */
+}
+.role-square:hover + p,
+.role p:hover {
+  color: #9a2219;
+  cursor: pointer;
+}
+.active {
+  background: rgba(154, 34, 25, 0.1);
+}
+.role-square {
+  width: 218px;
+  height: 145px;
+  display: flex;
+  justify-content: center;
+  border: 1px solid #eaeff5;
+  box-sizing: border-box;
+  border-radius: 12px;
+  transition: all 200ms ease-in-out;
+}
+.role p {
+  margin-top: 28px;
+  transition: all 200ms ease-in-out;
+}
+.role p:hover ~ .role-square {
+  background: rgba(0, 84, 254, 0.1);
+  cursor: pointer;
+}

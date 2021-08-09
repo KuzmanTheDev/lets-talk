@@ -1,0 +1,72 @@
+.nav {
+  margin-bottom: 31px;
+}
+
+.nav h5 {
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: normal;
+  color: #9ba4b0;
+  margin-left: 25px;
+  margin-bottom: 26px;
+}
+.nav p {
+  font-size: 14px;
+  font-weight: normal;
+  /* position: fixed;
+  left: 56px; */
+}
+.nav-item {
+  width: 229px;
+  height: 39px;
+  display: flex;
+  margin: 0 13px;
+  /* background-color: #9a2219; */
+  border-radius: 5px;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+.nav-icon-convo {
+  width: 16.63px;
+  height: 16.63px;
+  margin-left: 12.25px;
+  margin-right: 14.12px;
+}
+.nav-icon-question {
+  width: 15.94px;
+  height: 15.94px;
+  margin-left: 12.25px;
+  margin-right: 14.53px;
+}
+.nav-icon-cog {
+  width: 15.93px;
+  height: 15.93px;
+  margin-left: 12.25px;
+  margin-right: 14.53px;
+}
+.nav-icon-logout {
+  width: 15.94px;
+  height: 14.88px;
+  margin-left: 12.25px;
+  margin-right: 14.53px;
+}
+.message-count {
+  background-color: white;
+  width: 17px;
+  height: 17px;
+  margin-left: 59px;
+  border-radius: 50%;
+  color: #0054fe;
+  font-family: "Axiforma Regular";
+  font-size: 10px;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+/* .conversation {
+  position: fixed;
+  top: 193px;
+  left: 56px;
+  right: 100px;
+} */

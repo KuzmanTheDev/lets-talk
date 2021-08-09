@@ -1,0 +1,30 @@
+.chats {
+  display: flex;
+  flex-direction: column;
+}
+.search-block {
+  height: 47px;
+  border-bottom: 1px solid #eaedf3;
+  border-right: 1px solid #eaedf3;
+}
+.search-block > input {
+  border: none;
+  outline: none;
+  height: 45.9px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  font-family: "Axiforma Regular";
+  color: #a0aec0;
+}
+.search-block > img {
+  width: 14.26px;
+  height: 14.26px;
+  margin-left: 18px;
+  margin-right: 10.22px;
+}
+.chat-preview-block {
+  border-right: 1px solid #eaedf3;
+  height: 86vh;
+  overflow-y: auto;
+}

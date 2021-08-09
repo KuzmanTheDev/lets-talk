@@ -1,0 +1,53 @@
+button {
+  color: white;
+  background: #9a2219;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  padding: 0;
+  font-family: "Axiforma Regular";
+
+}
+
+button.primary {
+  background: #9a2219;
+  border: 1px solid #9a2219;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 18px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+}
+
+button.main {
+  font-size: 12px;
+  width: 70px;
+  height: 30px;
+  font-weight: bold;
+}
+
+button.primary:hover {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+button.disabled {
+  background: #777;
+  cursor: default;
+}
+/* .ripple {
+  background-position: center;
+  transition: background 0.8s;
+}
+.ripple:hover {
+  background: #9a2219 radial-gradient(circle, transparent 1%, #a93932 1%)
+    center/15000%;
+}
+.ripple:active {
+  background-color: #9a2219;
+  background-size: 100%;
+  transition: background 0s; */
+/* } */

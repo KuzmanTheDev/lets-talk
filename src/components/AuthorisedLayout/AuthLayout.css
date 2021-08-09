@@ -1,0 +1,97 @@
+.layout {
+  display: flex;
+  height: 100vh;
+  overflow-x: hidden;
+}
+.left-block {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 255px;
+  height: 100vh;
+  background: #1e2933;
+  color: white;
+}
+
+.logo-block > h2 {
+  position: fixed;
+  left: 83px;
+  top: 22px;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+.unilag-logo {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  left: 26.56px;
+  top: 15px;
+  background: #ffffff;
+  border-radius: 50%;
+}
+
+.imgLogo {
+  width: 39px;
+  height: 27.21px;
+}
+
+.user-avatar-block {
+  position: fixed;
+  top: 65px;
+  border-top: 1px solid #323e4a;
+  border-bottom: 1px solid #323e4a;
+  width: 255px;
+  height: 85px;
+  /* margin: ; */
+}
+.user-avatar-block > img {
+  position: fixed;
+  top: 95px;
+  left: 25px;
+  width: 35px;
+  height: 35px;
+}
+.user-avatar-block > p {
+  font-size: 16px;
+  font-weight: normal;
+  position: fixed;
+  top: 100px;
+  left: 72px;
+}
+.nav-block {
+  position: fixed;
+  top: 183px;
+}
+.right-block {
+  position: fixed;
+  left: 255px;
+  width: 100%;
+}
+.footer {
+  position: fixed;
+  top: 700px;
+  width: 255px;
+  border-top: 1px solid #323e4a;
+}
+.footer > h5 {
+  margin-top: 19px;
+  margin-left: 24px;
+  margin-bottom: 10px;
+  font-family: "Axiforma Regular";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: normal;
+}
+.footer > p {
+  margin-left: 24px;
+  font-family: "Axiforma Regular";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: normal;
+  width: 201px;
+  color: #9ba4b0;
+}

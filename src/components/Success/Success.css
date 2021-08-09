@@ -1,0 +1,16 @@
+.succcess-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.balloons {
+  margin-top: 90px;
+  width: 431.2px;
+  height: 188.1px;
+}
+
+.succcess-block h2 {
+  margin-top: 18px;
+  width: 100%;
+  text-align: center;
+}

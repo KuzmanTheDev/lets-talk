@@ -1,0 +1,8 @@
+.conversations {
+  display: flex;
+  flex-direction: column;
+}
+.chats-block {
+  display: grid;
+  grid-template-columns: 24% 76%;
+}
