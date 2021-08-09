@@ -1,11 +1,12 @@
+<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Available Script
 
 In the project directory, you can run:
-
+ 
 ### `npm start`
 
 Runs the app in the development mode.\
@@ -68,3 +69,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+=======
+# unilag-chat-platform
+Chat Applicaion for the University of Lagos.
+>>>>>>> 691227d396e2d071ae01f1ae92f02155aa8e6638
