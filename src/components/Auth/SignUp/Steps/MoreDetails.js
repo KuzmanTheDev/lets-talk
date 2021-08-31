@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import arrowLeftIcon from "../../../../assets/images/arrowLeft.png";
 import Button from "../../../Button/Button";
 import { RoleContext } from "../../../../Context/RoleContext";
+import arrowLeftIcon from "../../../../assets/images/arrowLeft.png";
 import "./UserDetails/UserDetails.css";
 
 export default function UserDetails({ values, nextStep, prevStep, onChange }) {
@@ -83,7 +83,7 @@ export default function UserDetails({ values, nextStep, prevStep, onChange }) {
             />
           </div>
           <div className="terms-block">
-            <input type="checkbox" />
+            <input type="checkbox" required />
             <p>
               By clicking this, you agree to the{" "}
               <Link to="/privacypolicy" style={{ textDecoration: "none" }}>
@@ -106,6 +106,21 @@ export default function UserDetails({ values, nextStep, prevStep, onChange }) {
             width: "537px",
             height: "56px",
             top: "670px",
+          }}
+          onClick={nextStep}
+        />
+      </div>
+
+      <div className="mobile-view__button">
+        <div className="previous" onClick={prevStep}>
+          <img src={arrowLeftIcon} alt="Previous" />
+        </div>
+        <Button
+          text="Proceed"
+          type="mobile"
+          style={{
+            width: "248px",
+            height: "56px",
           }}
           onClick={nextStep}
         />

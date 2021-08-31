@@ -1,0 +1,31 @@
+.help-layout {
+  margin-top: 65px;
+  display: grid;
+  grid-template-columns: 24% 76%;
+}
+.help-nav {
+  border-top: 1px solid #eaedf3;
+  border-right: 1px solid #eaedf3;
+  height: 92vh;
+  padding-top: 47px;
+  padding-left: 20px;
+}
+.help-nav-item {
+  display: flex;
+  margin-bottom: 53px;
+}
+.help-nav p {
+  cursor: pointer;
+  font-size: 14px;
+  margin-right: 20px;
+  transition: all 200ms ease-in-out;
+}
+.help-nav p:hover {
+  color: #9a2219;
+}
+
+.help-nav img {
+  width: 16px;
+  height: 16px;
+  margin-top: 1px;
+}

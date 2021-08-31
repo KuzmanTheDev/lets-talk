@@ -9,7 +9,6 @@ export default function Layout({ children }) {
   return (
     <section className="container">
       <div className="content">
-        {/* <div className="ellipse"></div> */}
         <div className="logo">
           <img src={unilagLogo} alt="Unilag Logo" className="imgLogo" />
         </div>
@@ -21,11 +20,13 @@ export default function Layout({ children }) {
             since the very beginning.
           </p>
           <div className="socials">
+            {/* <a href="/"> */}
             <img
               src={facebook}
               alt="Facebook Logo"
               className="socials-logo-fb"
             />
+            {/* </a> */}
             <img
               src={linkedin}
               alt="Linkedin Logo"

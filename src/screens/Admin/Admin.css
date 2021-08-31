@@ -1,0 +1,52 @@
+.admin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f8fafd;
+  height: 100vh;
+}
+
+.admin-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  width: 60%;
+  height: 468px;
+  box-shadow: 0px 1.0566px 10.566px rgba(0, 0, 0, 0.04);
+  margin: auto;
+  padding: 20px;
+}
+.admin-form label {
+  color: rgba(30, 17, 71, 0.5);
+}
+.admin-form img {
+  width: 77px;
+  height: 55px;
+  margin-bottom: 13px;
+}
+.admin-form p {
+  font-weight: normal;
+  font-size: 12.75px;
+  letter-spacing: 3.1875px;
+  margin-bottom: 18px;
+}
+.admin-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 28px;
+}
+.admin-field input {
+  width: 333px;
+  height: 53px;
+  padding: 19px 24px;
+  border: 1px solid #eaeff5;
+  border-radius: 5px;
+  font-family: "Axiforma Regular";
+  font-size: 16px;
+  outline: none;
+  /* color: rgba(30, 17, 71, 0.5); */
+}
+.admin-field input:focus {
+  border: 1px solid #88c4eb;
+}

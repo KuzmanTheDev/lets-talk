@@ -1,0 +1,25 @@
+.mobile-landing {
+  display: flex;
+  /* flex-direction: column; */
+  width: auto;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.mobile-content {
+  width: 100vw;
+  background: linear-gradient(
+      180deg,
+      rgba(38, 50, 56, 0.6) 0%,
+      rgba(196, 196, 196, 0) 100%
+    ),
+    url("../../assets/images/squarelanding.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+.button-block {
+  display: flex;
+  margin-top: 40px;
+}

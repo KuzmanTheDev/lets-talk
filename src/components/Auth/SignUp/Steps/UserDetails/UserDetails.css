@@ -1,6 +1,3 @@
-/* h2 {
-  width: 60%;
-} */
 .top-block {
   height: 74px;
   display: flex;
@@ -38,7 +35,6 @@
 }
 .form-block > p {
   margin-top: 18px;
-  width: 70%;
 }
 .fields-block {
   display: flex;
@@ -51,17 +47,23 @@
   margin-bottom: 28px;
 }
 .field input {
+  background: white;
   width: 530px;
-  height: 56px;
+  height: 53px;
   padding: 19px 24px;
   border: 1px solid #eaeff5;
   border-radius: 5px;
   font-family: "Axiforma Regular";
   font-size: 16px;
-  /* color: rgba(30, 17, 71, 0.5); */
+  outline: none;
+}
+.field input:focus,
+.field select:focus {
+  border: 1px solid #88c4eb;
 }
 .field select {
   appearance: none;
+  background: white;
   width: 530px;
   height: 56px;
   padding: 19px 24px;
@@ -85,7 +87,6 @@
 }
 .terms-block {
   display: flex;
-  justify-content: space-between;
   width: 499px;
   height: 56px;
 }
@@ -104,11 +105,25 @@
   height: 19px;
   margin-top: 6px;
 }
-/* .role-square:hover + p,
-  .role p:hover {
-    color: #0054fe;
-    cursor: pointer;
+
+@media only screen and (max-width: 930px) {
+  .top-block {
+    display: none;
   }
-  .active {
-    background: rgba(0, 84, 254, 0.1);
-  } */
+  .form-block {
+    display: flex;
+    flex-direction: column;
+    margin-left: 21px;
+    padding-top: 30px;
+  }
+
+  .field input,
+  .field select {
+    width: 95%;
+    background-size: 8px 5px, 5px 5px, 1px 1.5em;
+  }
+
+  .terms-block {
+    width: 95%;
+  }
+}

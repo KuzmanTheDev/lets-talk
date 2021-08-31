@@ -1,9 +1,13 @@
 import React from "react";
 import search from "../../../assets/images/search.png";
-import ChatPreview from "./ChatPreview/ChatPreview";
+import { useUsersContext } from "../../../Context/UsersContext";
+import ChatPreview from "../ChatPreview/ChatPreview";
 import "./Chats.css";
 
 export default function Chats() {
+  const { users: contacts } = useUsersContext();
+  // console.log(contacts);
+
   return (
     <div className="chats">
       <div className="search-block">
@@ -12,16 +16,11 @@ export default function Chats() {
       </div>
 
       <div className="chat-preview-block">
-        <ChatPreview />
-        <ChatPreview />
-        <ChatPreview />
-        <ChatPreview />
-        <ChatPreview />
-        <ChatPreview />
-        <ChatPreview />
-        <ChatPreview />
-        <ChatPreview />
+        {contacts.map((contact, index) => (
+          <ChatPreview key={index} contact={contact} />
+        ))}
       </div>
     </div>
   );
 }
+

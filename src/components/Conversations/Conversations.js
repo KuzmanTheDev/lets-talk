@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import Chats from "./Chats/Chats";
-import DialogueBox from "./DialogueBox/DialogueBox";
 import Filter from "./Filter/Filter";
+import { useUsersContext } from "../../Context/UsersContext";
 import "./Conversations.css";
 
-export default function Conversations() {
+export default function Conversations({ children }) {
   return (
     <div className="conversations">
       <div className="filter-block">
@@ -14,9 +14,7 @@ export default function Conversations() {
         <div>
           <Chats />
         </div>
-        <div>
-          <DialogueBox />
-        </div>
+        {children}
       </div>
     </div>
   );

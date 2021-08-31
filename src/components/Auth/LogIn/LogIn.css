@@ -1,7 +1,6 @@
 .link {
-  color: rgba(30, 17, 71, 0.5);
-}
-.link:hover {
   color: #9a2219;
-  /* background-color: black; */
 }
+/* .link:hover {
+  color: #9a2219;
+} */

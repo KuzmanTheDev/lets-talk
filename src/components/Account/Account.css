@@ -1,0 +1,48 @@
+.account {
+  display: grid;
+  grid-template-columns: 24% 76%;
+  margin-top: 65px;
+  border-top: 1px solid #eaedf3;
+  height: 305px;
+}
+
+.user-image-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid #eaedf3;
+  padding: 68px 0;
+  background-color: #f8fafd;
+}
+.user-image-block img {
+  width: 150px;
+  height: 149px;
+  margin-bottom: 14px;
+}
+.user-image-block h5 {
+  margin-bottom: 16px;
+}
+
+.user-image-block p {
+  font-size: 14px;
+  color: #9a2219;
+}
+.user-info-block {
+  display: flex;
+  flex-direction: column;
+  background-color: #f8fafd;
+  padding: 40px 0 23px 23px;
+}
+.user-info-block h4 {
+  font-size: 16px;
+  color: rgba(30, 17, 71, 0.18);
+  margin-bottom: 20px;
+}
+.user-info-block p {
+  font-size: 16px;
+  color: rgba(30, 17, 71, 0.5);
+  margin-bottom: 15px;
+}
+.user-info-block span {
+  color: black;
+}

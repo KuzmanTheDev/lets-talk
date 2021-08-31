@@ -64,6 +64,21 @@ export default function UserDetails() {
             // onClick={nextStep}
           />
         </div>
+
+        <div className="mobile-view__button">
+          <div className="previous" onClick={previousPage}>
+            <img src={arrowLeftIcon} alt="Previous" />
+          </div>
+          <Button
+            text="Proceed"
+            type="mobile"
+            style={{
+              width: "248px",
+              height: "56px",
+            }}
+            // onClick={nextStep}
+          />
+        </div>
       </div>
     </Layout>
   );

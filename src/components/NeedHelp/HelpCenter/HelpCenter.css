@@ -1,0 +1,43 @@
+.help-center {
+  border-top: 1px solid #eaedf3;
+  background: #f8fafd;
+  height: 92vh;
+  display: flex;
+  flex-direction: column;
+}
+.help-block {
+  margin-left: 40px;
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+}
+
+.help-block > h2 {
+  margin-bottom: 18px;
+}
+
+.help-block > p {
+  margin-bottom: 15px;
+}
+
+textarea {
+  width: 60%;
+  height: 267px;
+  font-family: "Axiforma Regular";
+  background-color: white;
+  padding: 10px;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #eaedf3;
+}
+
+textarea:focus {
+  border: 0.5px solid #88c4eb;
+}
+.help-center__button {
+  margin-top: 38px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 60%;
+}

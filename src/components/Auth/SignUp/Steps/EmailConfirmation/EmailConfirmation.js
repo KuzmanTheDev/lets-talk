@@ -18,12 +18,11 @@ export default function EmailConfirmation({ nextStep, prevStep, values }) {
         <img
           src={mailbox}
           alt="Mailbox"
-          className="mailbox-icon"
-          style={{ width: "121px", marginBottom: "50px" }}
+          // className="mailbox-icon"
         />
         <h2>Email Confirmation</h2>
         <p>
-          Click the link sent to the email <strong>{values.email}</strong> email
+          Click the link sent to the email - <strong>{values.email}</strong>
         </p>
       </div>
     </div>

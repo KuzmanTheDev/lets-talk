@@ -4,6 +4,7 @@ import { RoleContext } from "../../Context/RoleContext";
 import studentIcon from "../../assets/images/student.png";
 import lecturerIcon from "../../assets/images/lecturer.png";
 import Button from "../Button/Button";
+import arrowLeftIcon from "../../assets/images/arrowLeft.png";
 import "./GetStarted.css";
 
 export default function GetStarted() {
@@ -40,7 +41,7 @@ export default function GetStarted() {
       </div>
 
       <div className="welcome-block">
-        <h2>Let's get started</h2>
+        <h2>Let's get started !</h2>
         <p>Sign up as a lecturer or student...</p>
 
         <div className="role-block">
@@ -94,6 +95,23 @@ export default function GetStarted() {
             width: "537px",
             height: "56px",
             top: "515px",
+          }}
+          onClick={onRole}
+        />
+      </div>
+
+      <div className="mobile-view__button">
+        <div className="previous">
+          <Link to="/" style={{ textDecoration: "none" }}>
+            <img src={arrowLeftIcon} alt="Previous" />
+          </Link>
+        </div>
+        <Button
+          text="Proceed"
+          type="mobile"
+          style={{
+            width: "248px",
+            height: "56px",
           }}
           onClick={onRole}
         />

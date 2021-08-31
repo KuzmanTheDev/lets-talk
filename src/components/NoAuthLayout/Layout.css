@@ -70,3 +70,13 @@
   width: 21px;
   height: 17px;
 }
+
+@media only screen and (max-width: 930px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .content {
+    display: none;
+  }
+}

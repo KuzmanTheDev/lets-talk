@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import conversation from "../../assets/images/conversation.png";
 import cog from "../../assets/images/cog.png";
 import question from "../../assets/images/question-circle.png";
@@ -9,7 +10,14 @@ export default function Navigation() {
   return (
     <div>
       <div className="nav">
-        <div className="nav-item" style={{ backgroundColor: "#9a2219" }}>
+        <Link
+          className="nav-item"
+          to="/dashboard"
+          style={{
+            textDecoration: "none",
+            // backgroundColor: "#9a2219",
+          }}
+        >
           <img
             src={conversation}
             alt="Conversation"
@@ -17,26 +25,41 @@ export default function Navigation() {
           />
           <p className="conversation">Conversations</p>
           <div className="message-count">6</div>
-        </div>
+        </Link>
       </div>
 
       <div className="nav">
         <h5>SUPPORT</h5>
-        <div className="nav-item">
+        <Link
+          to="/help"
+          className="nav-item"
+          style={{
+            textDecoration: "none",
+          }}
+        >
           <img src={question} alt="Question" className="nav-icon-question" />
           <p className="need-help">Need Help?</p>
-        </div>
+        </Link>
       </div>
 
       <div className="nav">
         <h5>SETTINGS</h5>
-        <div className="nav-item" style={{ marginBottom: "26px" }}>
+        <Link
+          to="/account"
+          className="nav-item"
+          style={{
+            textDecoration: "none",
+            marginBottom: "26px",
+          }}
+        >
           <img src={cog} alt="Account" className="nav-icon-cog" />
           <p>Account</p>
-        </div>
+        </Link>
         <div className="nav-item">
           <img src={logout} alt="Logout" className="nav-icon-logout" />
-          <p>Log Out</p>
+          <Link to="/" style={{ textDecoration: "none", color: "white" }}>
+            <p>Log Out</p>
+          </Link>
         </div>
       </div>
     </div>

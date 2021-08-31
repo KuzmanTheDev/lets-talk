@@ -1,0 +1,38 @@
+.dashboard {
+  display: grid;
+  grid-template-columns: 23% 77%;
+  height: 100vh;
+  list-style: disc;
+}
+.dashboard-nav {
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #eaedf3;
+}
+.dashboard-nav__logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 110px;
+  margin: 40px 0 53px 60px;
+}
+.dashboard-nav img {
+  width: 56px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.dashboard-nav__logo h5 {
+  font-size: 10px;
+  font-weight: normal;
+  letter-spacing: 2.5px;
+  color: rgba(30, 17, 71, 0.7);
+}
+.dashboard-nav p {
+  width: 200px;
+  height: 50px;
+  margin-bottom: 21px;
+  display: flex;
+  align-items: center;
+}

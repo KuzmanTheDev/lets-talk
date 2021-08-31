@@ -1,28 +1,29 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { useHistory, Link } from "react-router-dom";
+import { RoleContext } from "../../../../../Context/RoleContext";
 import Button from "../../../../Button/Button";
 import arrowLeftIcon from "../../../../../assets/images/arrowLeft.png";
 import "./UserDetails.css";
 
 export default function UserDetails({ values, nextStep, onChange }) {
+  const context = useContext(RoleContext);
   const history = useHistory();
+  
+  useEffect(() => {
+    if (context.role === "") {
+      history.push("/");
+    }
+  });
 
   const previousPage = () => {
     history.goBack();
   };
-
-  // const handleChange = () => {
-  //   onChange();
-  //   // console.log(values);
-  // };
-
   return (
     <div>
       <div className="top-block">
         <button onClick={previousPage}>
           <span>
-            <img src={arrowLeftIcon} alt="Arrow icon" className="arrow-icon" />
-            {/* <i className="fas fa-arrow-left"></i> */}
+            <img src={arrowLeftIcon} alt="Previous" className="arrow-icon" />
           </span>
           Back
         </button>
@@ -37,7 +38,7 @@ export default function UserDetails({ values, nextStep, onChange }) {
       </div>
 
       <div className="form-block">
-        <h2>Let's get started</h2>
+        <h2>Let's get started !</h2>
         <p>Sign Up by entering the information below</p>
 
         <div className="fields-block">
@@ -83,6 +84,21 @@ export default function UserDetails({ values, nextStep, onChange }) {
             width: "537px",
             height: "56px",
             top: "670px",
+          }}
+          onClick={nextStep}
+        />
+      </div>
+
+      <div className="mobile-view__button">
+        <div className="previous" onClick={previousPage}>
+          <img src={arrowLeftIcon} alt="Previous" />
+        </div>
+        <Button
+          text="Proceed"
+          type="mobile"
+          style={{
+            width: "248px",
+            height: "56px",
           }}
           onClick={nextStep}
         />

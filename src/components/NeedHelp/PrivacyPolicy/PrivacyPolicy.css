@@ -1,0 +1,29 @@
+.privacy-policy {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #eaedf3;
+  height: 92vh;
+  background: #f8fafd;
+}
+
+.privacy-block {
+  margin-left: 40px;
+  margin-top: 48px;
+}
+.privacy-block h2 {
+  margin-bottom: 18px;
+}
+.privacy-statement {
+  background-color: white;
+  font-family: "Axiforma Regular";
+  height: 560px;
+  border-radius: 5px;
+  width: 65%;
+  padding: 28px;
+  overflow-y: scroll;
+  text-align: justify;
+}
+
+.privacy-statement::-webkit-scrollbar {
+  display: none;
+}

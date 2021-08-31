@@ -73,7 +73,7 @@
 }
 .footer {
   position: fixed;
-  top: 700px;
+  bottom: 39px;
   width: 255px;
   border-top: 1px solid #323e4a;
 }
@@ -94,4 +94,10 @@
   font-weight: normal;
   width: 201px;
   color: #9ba4b0;
+}
+
+@media only screen and (max-width: 930px) {
+  .layout {
+    display: none;
+  }
 }

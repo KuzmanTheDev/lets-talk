@@ -1,0 +1,18 @@
+.users {
+  display: flex;
+  flex-direction: column;
+}
+
+/* .users-header {
+  border-bottom: ;
+} */
+
+.users-header h2 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 44px 34px;
+}
+.users-list {
+  background: #f8fafd;
+  height: 85vh;
+}

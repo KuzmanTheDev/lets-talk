@@ -4,13 +4,24 @@
   align-items: center;
 }
 .balloons {
-  margin-top: 90px;
-  width: 431.2px;
-  height: 188.1px;
+  margin: 90px 0 40px 0;
+  /* width: 431.2px;
+  height: 188.1px; */
 }
 
 .succcess-block h2 {
-  margin-top: 18px;
+  margin-top: 38px;
   width: 100%;
   text-align: center;
+}
+
+@media only screen and (max-width: 930px) {
+  .large-balloons {
+    display: none;
+  }
+}
+@media only screen and (min-width: 930px) {
+  .small-balloons {
+    display: none;
+  }
 }

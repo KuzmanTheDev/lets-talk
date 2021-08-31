@@ -4,7 +4,12 @@ import avatar from "../../assets/images/avatar.png";
 import Navigation from "../Navigation/Navigation";
 import "./AuthLayout.css";
 
-export default function Layout({ children }) {
+export default function Layout({
+  children,
+  convoScreen,
+  needHelpScreen,
+  accountScreen,
+}) {
   return (
     <section className="layout">
       <div className="left-block">
@@ -21,14 +26,17 @@ export default function Layout({ children }) {
         </div>
 
         <div className="nav-block">
-          <Navigation />
+          <Navigation
+            onConversations={convoScreen}
+            onNeedHelp={needHelpScreen}
+            onAccount={accountScreen}
+          />
         </div>
         <div className="footer">
           <h5>Unilag Inc. 2021</h5>
           <p>something blah blah blah</p>
         </div>
       </div>
-
       <div className="right-block">{children}</div>
     </section>
   );

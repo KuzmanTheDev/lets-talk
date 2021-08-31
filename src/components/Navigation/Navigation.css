@@ -2,6 +2,10 @@
   margin-bottom: 31px;
 }
 
+.nav a:active,
+.nav a.active {
+  background-color: #9a2219;
+}
 .nav h5 {
   font-size: 12px;
   letter-spacing: 1px;
@@ -13,6 +17,7 @@
 .nav p {
   font-size: 14px;
   font-weight: normal;
+  color: white;
   /* position: fixed;
   left: 56px; */
 }
@@ -21,10 +26,17 @@
   height: 39px;
   display: flex;
   margin: 0 13px;
-  /* background-color: #9a2219; */
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
   border-radius: 5px;
   align-items: center;
   /* justify-content: space-between; */
+}
+.nav-item:hover {
+  background-color: #b4a5a42e;
+}
+.active-nav {
+  background-color: #9a2219;
 }
 .nav-icon-convo {
   width: 16.63px;
@@ -64,9 +76,3 @@
   justify-content: center;
   align-items: flex-end;
 }
-/* .conversation {
-  position: fixed;
-  top: 193px;
-  left: 56px;
-  right: 100px;
-} */

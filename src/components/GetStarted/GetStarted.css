@@ -22,7 +22,6 @@
 }
 .welcome-block > p {
   margin-top: 18px;
-  width: 55%;
 }
 .role-block {
   display: flex;
@@ -65,4 +64,52 @@
 .role p:hover ~ .role-square {
   background: rgba(0, 84, 254, 0.1);
   cursor: pointer;
+}
+
+@media only screen and (max-width: 930px) {
+  .header {
+    display: none;
+  }
+  .welcome-block {
+    display: flex;
+    flex-direction: column;
+    margin-left: 21px;
+    padding-top: 30px;
+    /* background: #e5e5e5; */
+  }
+
+  .role-block {
+    justify-content: space-around;
+  }
+  .role-square {
+    width: 100%;
+  }
+  .mobile-view__button {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    padding: 12px 21px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: 0px -2px 35px rgb(32 32 35 / 10%);
+  }
+  .previous {
+    width: 67px;
+    background: rgba(234, 239, 245, 0.6);
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .previous img {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media only screen and (min-width: 930px) {
+  .mobile-view__button {
+    display: none;
+  }
 }

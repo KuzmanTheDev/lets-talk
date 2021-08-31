@@ -28,3 +28,17 @@
   height: 86vh;
   overflow-y: auto;
 }
+
+.chats::-webkit-scrollbar,
+.chat-preview-block::-webkit-scrollbar {
+  width: 6px !important;
+  height: 6px !important;
+}
+/* .chats::-webkit-scrollbar-track,
+.chat-preview-block::-webkit-scrollbar-track {
+  background-color: black;
+} */
+.chats::-webkit-scrollbar-thumb,
+.chat-preview-block::-webkit-scrollbar-thumb {
+  background-color: #d8d9dc;
+}
