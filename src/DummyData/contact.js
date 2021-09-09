@@ -5,7 +5,7 @@ import ppGirl4 from "./images/profile-picture-girl-4.jpeg";
 import ppBoy1 from "./images/profile-picture-boy-1.jpeg";
 import ppBoy2 from "./images/profile-picture-boy-2.jpeg";
 import ppBoy3 from "./images/profile-picture-boy-3.jpeg";
-import RandomSentence from "../helpers/RandomSentence";
+import RandomSentence from "../utilities/RandomSentence";
 
 const users = [
   {

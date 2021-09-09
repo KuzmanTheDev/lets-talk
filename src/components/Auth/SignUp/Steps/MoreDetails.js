@@ -1,13 +1,10 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import Button from "../../../Button/Button";
-import { RoleContext } from "../../../../Context/RoleContext";
 import arrowLeftIcon from "../../../../assets/images/arrowLeft.png";
 import "./UserDetails/UserDetails.css";
 
 export default function UserDetails({ values, nextStep, prevStep, onChange }) {
-  const context = useContext(RoleContext);
-
   const capitalize = (s) => {
     if (typeof s !== "string") return "";
     return s.charAt(0).toUpperCase() + s.slice(1);
@@ -33,13 +30,14 @@ export default function UserDetails({ values, nextStep, prevStep, onChange }) {
       </div>
 
       <div className="form-block">
-        <h2>Knowing our {capitalize(context.role)}s Better</h2>
+        <h2>Knowing our {capitalize(localStorage.getItem("role"))}s Better</h2>
         <p>Sign Up by entering the information below</p>
-
         <div className="fields-block">
           <div className="field">
             <label>
-              {context.role === "student" ? "Matric Number" : "ID Number"}
+              {localStorage.getItem("role") === "student"
+                ? "Matric Number"
+                : "ID Number"}
             </label>
             <input
               type="text"

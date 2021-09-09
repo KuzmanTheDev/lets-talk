@@ -18,10 +18,11 @@
   font-family: "Axiforma Regular";
   height: 560px;
   border-radius: 5px;
-  width: 65%;
+  width: 62%;
   padding: 28px;
   overflow-y: scroll;
   text-align: justify;
+  line-height: 27px;
 }
 
 .privacy-statement::-webkit-scrollbar {

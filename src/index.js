@@ -1,18 +1,28 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
+import { QueryClient, QueryClientProvider } from "react-query";
 import { RoleProvider } from "./Context/RoleContext";
 import { UsersProvider } from "./Context/UsersContext";
-import "./index.css";
+import { AuthProvider } from "./Context/AuthContext";
+import { ReactQueryDevtools } from "react-query/devtools";
 import reportWebVitals from "./reportWebVitals";
+import App from "./App";
+import "./index.css";
+
+const queryClient = new QueryClient();
 
 ReactDOM.render(
   <React.StrictMode>
-    <RoleProvider>
-      <UsersProvider>
-        <App />
-      </UsersProvider>
-    </RoleProvider>
+    <QueryClientProvider client={queryClient}>
+      <AuthProvider>
+        <RoleProvider>
+          <UsersProvider>
+            <App />
+            <ReactQueryDevtools />
+          </UsersProvider>
+        </RoleProvider>
+      </AuthProvider>
+    </QueryClientProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

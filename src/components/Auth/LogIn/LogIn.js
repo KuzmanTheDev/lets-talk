@@ -1,29 +1,56 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useHistory, Link } from "react-router-dom";
-import arrowLeftIcon from "../../../assets/images/arrowLeft.png";
+import { AuthContext } from "../../../Context/AuthContext";
+import { useMutation } from "react-query";
 import Button from "../../Button/Button";
 import Layout from "../../NoAuthLayout/Layout";
-import "../SignUp/Steps/UserDetails/UserDetails.css";
-import "./LogIn.css";
+import arrowLeftIcon from "../../../assets/images/arrowLeft.png";
+import * as api from "../../../utilities/API";
+import { isValidEmail, isRequired } from "../../../utilities/InputValidators";
 
 export default function UserDetails() {
-  const history = useHistory();
+  const context = useContext(AuthContext);
+  const [values, setValues] = useState({
+    email: "150408002@live.unilag.edu.ng",
+    password: "michaelUti",
+  });
+  const [errors, setErrors] = useState({
+    email: [],
+    password: [],
+  });
 
+  const history = useHistory();
   const previousPage = () => {
     history.goBack();
   };
-  const [values, setValues] = useState({
-    email: "",
-    password: "",
-  });
 
   const handleChange = (input) => (e) => {
     setValues({ ...values, [input]: e.target.value });
   };
 
+  const { mutate, isLoading } = useMutation(api.login, {
+    onSuccess: ({ data: userdata }) => {
+      history.push("/");
+      context.login(userdata);
+    },
+  });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    mutate(values);
+  };
+  
+  function validate(validations) {
+    setErrors(
+      validations
+        .map((errorsFor) => errorsFor(values.email))
+        .filter((errorMsg) => errorMsg.length > 0)
+    );
+  }
+
   return (
     <Layout>
-      <div>
+      <form>
         <div className="top-block">
           <button onClick={previousPage}>
             <span>
@@ -54,29 +81,34 @@ export default function UserDetails() {
               <label>Email</label>
               <input
                 type="email"
-                placeholder="John Doe"
+                placeholder="150408002@live.unilag.edu.ng"
                 defaultValue={values.email}
                 onChange={handleChange("email")}
+                onBlur={() => validate([isRequired, isValidEmail])}
                 required
               />
+              {errors.length > 0 ? (
+                <small className="has-error">{errors.join(", ")}</small>
+              ) : null}
             </div>
             <div className="field">
               <label>Password</label>
               <input
                 type="password"
-                placeholder="okemati@gmail.com"
+                placeholder="*************"
                 defaultValue={values.password}
                 onChange={handleChange("password")}
                 required
               />
             </div>
+
             <p>
               <Link
                 to="/recover-password"
                 style={{
                   textDecoration: "none",
+                  color: "#9a2219",
                 }}
-                className="link"
               >
                 Forgot Password?
               </Link>
@@ -92,7 +124,8 @@ export default function UserDetails() {
               height: "56px",
               top: "555px",
             }}
-            // onClick={nextStep}
+            loading={isLoading}
+            onClick={handleSubmit}
           />
         </div>
 
@@ -110,7 +143,7 @@ export default function UserDetails() {
             // onClick={nextStep}
           />
         </div>
-      </div>
+      </form>
     </Layout>
   );
 }

@@ -1,16 +1,13 @@
 import React, { useContext, useEffect } from "react";
 import { useHistory, Link } from "react-router-dom";
-import { RoleContext } from "../../../../../Context/RoleContext";
 import Button from "../../../../Button/Button";
 import arrowLeftIcon from "../../../../../assets/images/arrowLeft.png";
 import "./UserDetails.css";
 
 export default function UserDetails({ values, nextStep, onChange }) {
-  const context = useContext(RoleContext);
   const history = useHistory();
-  
   useEffect(() => {
-    if (context.role === "") {
+    if (!localStorage.getItem("role") === "") {
       history.push("/");
     }
   });
@@ -65,11 +62,12 @@ export default function UserDetails({ values, nextStep, onChange }) {
           <div className="field">
             <label>Date of Birth</label>
             <input
-              // type="text"
-              // placeholder="MM/DD/YYYY"
-              type="date"
+              type="text"
+              placeholder="YYYY/MM/DD"
+              // type="date"
               defaultValue={values.dateOfBirth}
               onChange={onChange("dateOfBirth")}
+              onFocus={(e) => (e.target.type = "date")}
               required
             />
           </div>

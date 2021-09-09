@@ -1,4 +1,7 @@
+import React, { useContext } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import { AuthContext } from "./Context/AuthContext";
+import { useMediaQuery } from "./utilities/MediaQuery";
 import Home from "./screens/Home/Home";
 import Admin from "./screens/Admin/Admin";
 import Dashboard from "./screens/Dashboard";
@@ -14,13 +17,15 @@ import Chat from "./components/Conversations/Chat/Chat";
 import Layout from "./components/AuthorisedLayout/AuthLayout";
 import Account from "./components/Account/Account";
 import NeedHelp from "./components/NeedHelp/NeedHelp";
-import Conversations from "./components/Conversations/Conversations";
-import { useMediaQuery } from "./helpers/MediaQuery";
+// import NotFound from "./components/NotFoundPage/NotFound";
+// import { AuthRoute } from "./utilities/AuthRoute";
 import "./App.css";
+//TODO: uninstall jwtdeode
 
 function App() {
+  const { user } = useContext(AuthContext);
   const web = useMediaQuery("(min-width : 930px)");
-  const authorisedUser = true;
+  // console.log(user);
   let routes = (
     <>
       <Route exact path="/" component={Home} />
@@ -32,29 +37,33 @@ function App() {
       <Route path="/privacy-policy" component={PrivacyPolicy} />
       <Route exact path="/admin" component={Admin} />
       <Route path="/admin/dashboard" component={AdminDashboard} />
+      {/* <Route path="*" component={NotFound} /> */}
     </>
   );
 
-  if (authorisedUser && web) {
+  if (user && web) {
     routes = (
       <div>
         <Layout>
-          <Route exact path="/dashboard" component={Dashboard} />
+          <Route exact path="/" component={Dashboard} />
+          <Route path="/privacy-policy" component={PrivacyPolicy} />
           <Route path="/account" component={Account} />
           <Route path="/help" component={NeedHelp} />
-          <Route path="/dashboard/chat/:id" component={Chat} />
+          <Route path="/chat/:id" component={Chat} />
           <Route path="/image-upload" component={ImageUpload} />
+          {/* <Route path="*" component={NotFound} /> */}
         </Layout>
       </div>
     );
-  } else if (authorisedUser && !web) {
+  } else if (user && !web) {
     routes = (
       <div>
-        <Route exact path="/dashboard" component={Dashboard} />
-        <Route exact path="/account" component={Account} />
-        <Route exact path="/help" component={NeedHelp} />
-        <Route path="/dashboard/chat/:id" component={Chat} />
+        <Route exact path="/" component={Dashboard} />
+        <Route path="/account" component={Account} />
+        <Route path="/help" component={NeedHelp} />
+        <Route path="/chat/:id" component={Chat} />
         <Route path="/image-upload" component={ImageUpload} />
+        {/* <Route path="*" component={NotFound} /> */}
       </div>
     );
   }

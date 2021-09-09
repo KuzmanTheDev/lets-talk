@@ -1,7 +1,8 @@
 import React from "react";
-import { useMediaQuery } from "../../../helpers/MediaQuery";
-import Layout from "../../AuthorisedLayout/AuthLayout";
+import { useMediaQuery } from "../../../utilities/MediaQuery";
+import ChatInput from "../ChatInpu/ChatInput";
 import Conversations from "../Conversations";
+import DialogueBox from "../DialogueBox/DialogueBox";
 import "./Chat.css";
 
 export default function Chat({ match }) {
@@ -11,9 +12,8 @@ export default function Chat({ match }) {
     <div>
       {web ? (
         <Conversations>
-          <div>
-            <h2>Chat{match.params.id}</h2>
-          </div>
+          <DialogueBox data={match.params.id} />
+         
         </Conversations>
       ) : (
         <div>

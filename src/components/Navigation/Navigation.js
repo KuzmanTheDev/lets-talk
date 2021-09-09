@@ -1,23 +1,19 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useContext } from "react";
+import { NavLink } from "react-router-dom";
+import { AuthContext } from "../../Context/AuthContext";
 import conversation from "../../assets/images/conversation.png";
 import cog from "../../assets/images/cog.png";
 import question from "../../assets/images/question-circle.png";
-import logout from "../../assets/images/logout.png";
+import logoutIcon from "../../assets/images/logout.png";
 import "./Navigation.css";
 
 export default function Navigation() {
+  const { logout } = useContext(AuthContext);
+
   return (
     <div>
       <div className="nav">
-        <Link
-          className="nav-item"
-          to="/dashboard"
-          style={{
-            textDecoration: "none",
-            // backgroundColor: "#9a2219",
-          }}
-        >
+        <NavLink className="nav-item" to="/">
           <img
             src={conversation}
             alt="Conversation"
@@ -25,41 +21,30 @@ export default function Navigation() {
           />
           <p className="conversation">Conversations</p>
           <div className="message-count">6</div>
-        </Link>
+        </NavLink>
       </div>
 
       <div className="nav">
         <h5>SUPPORT</h5>
-        <Link
-          to="/help"
-          className="nav-item"
-          style={{
-            textDecoration: "none",
-          }}
-        >
+        <NavLink to="/help" className="nav-item">
           <img src={question} alt="Question" className="nav-icon-question" />
           <p className="need-help">Need Help?</p>
-        </Link>
+        </NavLink>
       </div>
 
       <div className="nav">
         <h5>SETTINGS</h5>
-        <Link
+        <NavLink
           to="/account"
           className="nav-item"
-          style={{
-            textDecoration: "none",
-            marginBottom: "26px",
-          }}
+          style={{ marginBottom: "20px" }}
         >
           <img src={cog} alt="Account" className="nav-icon-cog" />
           <p>Account</p>
-        </Link>
-        <div className="nav-item">
-          <img src={logout} alt="Logout" className="nav-icon-logout" />
-          <Link to="/" style={{ textDecoration: "none", color: "white" }}>
-            <p>Log Out</p>
-          </Link>
+        </NavLink>
+        <div className="nav-item" onClick={logout}>
+          <img src={logoutIcon} alt="Logout" className="nav-icon-logout" />
+          <p>Log Out</p>
         </div>
       </div>
     </div>

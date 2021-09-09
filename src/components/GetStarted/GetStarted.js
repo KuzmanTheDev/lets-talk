@@ -15,10 +15,13 @@ export default function GetStarted() {
 
   const studentRole = () => {
     setState({ ...state, role: "student", active: "student" });
+    localStorage.setItem("role", "student");
+
     context.studentRole("student");
   };
   const lecturerRole = () => {
     setState({ ...state, role: "lecturer", active: "lecturer" });
+    localStorage.setItem("role", "lecturer");
     context.lecturerRole("lecturer");
   };
   const onRole = () => {

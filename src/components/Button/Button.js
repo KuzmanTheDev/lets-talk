@@ -1,12 +1,12 @@
 import React from "react";
-import loading from "../../assets/images/loading.svg";
+import loader from "../../assets/images/loading.svg";
 import "./Button.css";
 
 export default function Button({
   style = {},
   disabled,
   text,
-  isLoading,
+  loading,
   onClick,
   type = "primary",
 }) {
@@ -17,7 +17,7 @@ export default function Button({
       className={`${type} ${disabled ? "disabled" : ""} ripple`}
       onClick={onClick}
     >
-      {isLoading ? <img src={loading} alt="loader" /> : text}
+      {loading ? <img src={loader} alt="loader" /> : text}
     </button>
   );
 }

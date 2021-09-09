@@ -4,3 +4,13 @@
 /* .link:hover {
   color: #9a2219;
 } */
+
+.field i {
+  position: absolute;
+}
+.icon {
+  padding: 15px;
+  color: rgb(49, 0, 128);
+  width: 70px;
+  text-align: right;
+}

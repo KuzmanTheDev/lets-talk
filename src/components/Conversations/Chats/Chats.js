@@ -1,7 +1,7 @@
 import React from "react";
-import search from "../../../assets/images/search.png";
 import { useUsersContext } from "../../../Context/UsersContext";
 import ChatPreview from "../ChatPreview/ChatPreview";
+import search from "../../../assets/images/search.png";
 import "./Chats.css";
 
 export default function Chats() {
