@@ -30,7 +30,7 @@ export default function UserDetails() {
 
   const { mutate, isLoading } = useMutation(api.login, {
     onSuccess: ({ data: userdata }) => {
-      history.push("/");
+      history.push("/chat");
       context.login(userdata);
     },
   });

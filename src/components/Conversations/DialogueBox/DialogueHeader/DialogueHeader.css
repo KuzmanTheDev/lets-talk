@@ -1,0 +1,22 @@
+.dialogue-header {
+  padding: 9.5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eaedf3;
+}
+
+.dialogue-header p {
+  margin-left: 18px;
+}
+
+.dialogue-header_tools {
+  margin-left: 18px;
+  height: 23px;
+  border-left: 1px solid black;
+}
+
+.dialogue-header_tools img {
+  width: 23.125px;
+  height: 13.875px;
+}

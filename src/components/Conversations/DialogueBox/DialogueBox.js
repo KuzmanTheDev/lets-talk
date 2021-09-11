@@ -1,5 +1,4 @@
 import React from "react";
-import speechBubble from "../../../assets/images/speech-bubble.png";
 import ChatInput from "../ChatInpu/ChatInput";
 import "./DialogueBox.css";
 import DialogueHeader from "./DialogueHeader/DialogueHeader";

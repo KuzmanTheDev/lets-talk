@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useHistory, Link } from "react-router-dom";
 import Button from "../../../../Button/Button";
 import arrowLeftIcon from "../../../../../assets/images/arrowLeft.png";
@@ -81,7 +81,7 @@ export default function UserDetails({ values, nextStep, onChange }) {
             position: "absolute",
             width: "537px",
             height: "56px",
-            top: "670px",
+            top: "652px",
           }}
           onClick={nextStep}
         />

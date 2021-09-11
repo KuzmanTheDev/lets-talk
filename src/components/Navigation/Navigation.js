@@ -13,7 +13,7 @@ export default function Navigation() {
   return (
     <div>
       <div className="nav">
-        <NavLink className="nav-item" to="/">
+        <NavLink className="nav-item" to="/chat">
           <img
             src={conversation}
             alt="Conversation"

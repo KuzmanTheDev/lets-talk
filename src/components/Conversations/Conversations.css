@@ -6,3 +6,15 @@
   display: grid;
   grid-template-columns: 24% 76%;
 }
+
+.chat_welcome-img {
+  display: flex;
+  align-items: center;
+}
+
+.chat_welcome-img > img {
+  width: 150px;
+  height: 150px;
+  margin-left: calc(50% / 2);
+  margin-right: calc(50% / 2);
+}

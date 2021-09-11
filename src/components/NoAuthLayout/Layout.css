@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 30% 70%;
   height: 100vh;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 .content {
   background: linear-gradient(

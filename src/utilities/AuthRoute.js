@@ -8,7 +8,7 @@ export function AuthRoute({ component: Component, ...rest }) {
     <Route
       {...rest}
       render={(props) =>
-        user ? <Redirect to="/conversations" /> : <Component {...props} />
+        user ? <Redirect to="/chat" /> : <Component {...props} />
       }
     />
   );

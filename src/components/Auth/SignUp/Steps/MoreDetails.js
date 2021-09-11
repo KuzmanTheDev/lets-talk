@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import Button from "../../../Button/Button";
 import arrowLeftIcon from "../../../../assets/images/arrowLeft.png";
@@ -54,13 +54,13 @@ export default function UserDetails({ values, nextStep, prevStep, onChange }) {
               onChange={onChange("faculty")}
               required
             >
-              <option disabled hidden defaultValue>
-                Choose Faculty
+              <option value="default" disabled>
+                Choose Faculty...
               </option>
-              <option defaultValue="Engineering">Engineering</option>
-              <option defaultValue="Science">Science</option>
-              <option defaultValue="Accounting">Accounting</option>
-              <option defaultValue="Art">Art</option>
+              <option value="Engineering">Engineering</option>
+              <option value="Science">Science</option>
+              <option value="Accounting">Accounting</option>
+              <option value="Art">Art</option>
             </select>
             {/* <input
               type="text"
@@ -103,7 +103,7 @@ export default function UserDetails({ values, nextStep, prevStep, onChange }) {
             position: "absolute",
             width: "537px",
             height: "56px",
-            top: "670px",
+            top: "652px",
           }}
           onClick={nextStep}
         />

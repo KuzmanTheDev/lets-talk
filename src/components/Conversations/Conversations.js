@@ -2,6 +2,7 @@ import React from "react";
 import Chats from "./Chats/Chats";
 import Filter from "./Filter/Filter";
 // import { useUsersContext } from "../../Context/UsersContext";
+import speechBubble from "../../assets/images/speech-bubble.png";
 import "./Conversations.css";
 
 export default function Conversations({ children }) {
@@ -15,7 +16,13 @@ export default function Conversations({ children }) {
         <div>
           <Chats />
         </div>
-        {children}
+        {children ? (
+          children
+        ) : (
+          <div className="chat_welcome-img">
+            <img src={speechBubble} alt="Speech" />
+          </div>
+        )}
       </div>
     </div>
   );

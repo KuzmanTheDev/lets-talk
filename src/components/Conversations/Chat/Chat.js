@@ -1,6 +1,5 @@
 import React from "react";
 import { useMediaQuery } from "../../../utilities/MediaQuery";
-import ChatInput from "../ChatInpu/ChatInput";
 import Conversations from "../Conversations";
 import DialogueBox from "../DialogueBox/DialogueBox";
 import "./Chat.css";
@@ -13,7 +12,6 @@ export default function Chat({ match }) {
       {web ? (
         <Conversations>
           <DialogueBox data={match.params.id} />
-         
         </Conversations>
       ) : (
         <div>

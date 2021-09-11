@@ -18,14 +18,13 @@ import Layout from "./components/AuthorisedLayout/AuthLayout";
 import Account from "./components/Account/Account";
 import NeedHelp from "./components/NeedHelp/NeedHelp";
 // import NotFound from "./components/NotFoundPage/NotFound";
-// import { AuthRoute } from "./utilities/AuthRoute";
+import { AuthRoute } from "./utilities/AuthRoute";
 import "./App.css";
-//TODO: uninstall jwtdeode
 
 function App() {
   const { user } = useContext(AuthContext);
   const web = useMediaQuery("(min-width : 930px)");
-  // console.log(user);
+
   let routes = (
     <>
       <Route exact path="/" component={Home} />
@@ -37,7 +36,6 @@ function App() {
       <Route path="/privacy-policy" component={PrivacyPolicy} />
       <Route exact path="/admin" component={Admin} />
       <Route path="/admin/dashboard" component={AdminDashboard} />
-      {/* <Route path="*" component={NotFound} /> */}
     </>
   );
 
@@ -45,20 +43,21 @@ function App() {
     routes = (
       <div>
         <Layout>
-          <Route exact path="/" component={Dashboard} />
-          <Route path="/privacy-policy" component={PrivacyPolicy} />
+          <AuthRoute path="/signup" component={Form} />
+          <AuthRoute path="/login" component={LogIn} />
+          <Route exact path="/chat" component={Dashboard} />
           <Route path="/account" component={Account} />
           <Route path="/help" component={NeedHelp} />
           <Route path="/chat/:id" component={Chat} />
           <Route path="/image-upload" component={ImageUpload} />
-          {/* <Route path="*" component={NotFound} /> */}
+          <Route path="/privacy-policy" component={PrivacyPolicy} />
         </Layout>
       </div>
     );
   } else if (user && !web) {
     routes = (
       <div>
-        <Route exact path="/" component={Dashboard} />
+        <Route exact path="/chat" component={Dashboard} />
         <Route path="/account" component={Account} />
         <Route path="/help" component={NeedHelp} />
         <Route path="/chat/:id" component={Chat} />
