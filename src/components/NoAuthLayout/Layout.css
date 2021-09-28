@@ -33,7 +33,7 @@
 }
 .content-block {
   height: 47px;
-  margin-top: 470px;
+  margin-top: 410px;
   margin-left: 48px;
   font-style: normal;
 }
@@ -71,7 +71,7 @@
   height: 17px;
 }
 
-@media only screen and (max-width: 930px) {
+@media only screen and (max-width: 776px) {
   .container {
     display: flex;
     flex-direction: column;

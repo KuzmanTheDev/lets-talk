@@ -15,6 +15,7 @@ export default function UserDetails({ values, nextStep, onChange }) {
   const previousPage = () => {
     history.goBack();
   };
+  
   return (
     <div>
       <div className="top-block">
@@ -79,7 +80,7 @@ export default function UserDetails({ values, nextStep, onChange }) {
           type="primary"
           style={{
             position: "absolute",
-            width: "537px",
+            width: "520px",
             height: "56px",
             top: "652px",
           }}

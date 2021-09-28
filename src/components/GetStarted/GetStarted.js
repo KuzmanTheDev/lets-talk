@@ -1,6 +1,5 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-import { RoleContext } from "../../Context/RoleContext";
 import studentIcon from "../../assets/images/student.png";
 import lecturerIcon from "../../assets/images/lecturer.png";
 import Button from "../Button/Button";
@@ -9,20 +8,16 @@ import "./GetStarted.css";
 
 export default function GetStarted() {
   const history = useHistory();
-  const context = useContext(RoleContext);
 
   const [state, setState] = useState({ role: "", active: "" });
 
   const studentRole = () => {
     setState({ ...state, role: "student", active: "student" });
     localStorage.setItem("role", "student");
-
-    context.studentRole("student");
   };
   const lecturerRole = () => {
     setState({ ...state, role: "lecturer", active: "lecturer" });
     localStorage.setItem("role", "lecturer");
-    context.lecturerRole("lecturer");
   };
   const onRole = () => {
     if (state.role === "") {
@@ -95,7 +90,7 @@ export default function GetStarted() {
           type="primary"
           style={{
             position: "absolute",
-            width: "537px",
+            width: "437px",
             height: "56px",
             top: "515px",
           }}

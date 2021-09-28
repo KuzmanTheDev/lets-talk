@@ -5,8 +5,8 @@ import { useMutation } from "react-query";
 import Button from "../../Button/Button";
 import Layout from "../../NoAuthLayout/Layout";
 import arrowLeftIcon from "../../../assets/images/arrowLeft.png";
-import * as api from "../../../utilities/API";
 import { isValidEmail, isRequired } from "../../../utilities/InputValidators";
+import * as api from "../../../utilities/API";
 
 export default function UserDetails() {
   const context = useContext(AuthContext);
@@ -14,6 +14,7 @@ export default function UserDetails() {
     email: "150408002@live.unilag.edu.ng",
     password: "michaelUti",
   });
+  
   const [errors, setErrors] = useState({
     email: [],
     password: [],
@@ -23,7 +24,6 @@ export default function UserDetails() {
   const previousPage = () => {
     history.goBack();
   };
-
   const handleChange = (input) => (e) => {
     setValues({ ...values, [input]: e.target.value });
   };
@@ -39,7 +39,7 @@ export default function UserDetails() {
     e.preventDefault();
     mutate(values);
   };
-  
+
   function validate(validations) {
     setErrors(
       validations
@@ -140,7 +140,7 @@ export default function UserDetails() {
               width: "248px",
               height: "56px",
             }}
-            // onClick={nextStep}
+            onClick={handleSubmit}
           />
         </div>
       </form>

@@ -66,7 +66,12 @@
   cursor: pointer;
 }
 
-@media only screen and (max-width: 930px) {
+@media only screen and (max-width: 900px) {
+  .welcome-block {
+    margin-left: 26px;
+  }
+}
+@media only screen and (max-width: 776px) {
   .header {
     display: none;
   }
@@ -108,7 +113,7 @@
   }
 }
 
-@media only screen and (min-width: 930px) {
+@media only screen and (min-width: 776px) {
   .mobile-view__button {
     display: none;
   }

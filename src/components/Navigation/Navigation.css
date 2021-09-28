@@ -18,8 +18,6 @@
   font-size: 14px;
   font-weight: normal;
   color: white;
-  /* position: fixed;
-  left: 56px; */
 }
 .nav-item {
   width: 229px;
@@ -36,9 +34,9 @@
 .nav-item:hover {
   background-color: #b4a5a42e;
 }
-.active-nav {
+/* .active-nav {
   background-color: #9a2219;
-}
+} */
 .nav-icon-convo {
   width: 16.63px;
   height: 16.63px;

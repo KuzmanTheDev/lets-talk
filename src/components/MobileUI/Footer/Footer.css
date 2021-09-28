@@ -1,10 +1,10 @@
 .mobile-footer {
+  background: white;
   position: fixed;
   bottom: 0;
   z-index: 800;
   height: 57px;
   width: 100vw;
-  /* padding: 20px 0px 0px; */
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -12,9 +12,10 @@
   box-shadow: 0px -2px 35px rgb(32 32 35 / 10%);
 }
 
-.nav-active {
+.mobile-footer a:active,
+.mobile-footer a.active {
   border-bottom: 3.5px solid #9a2219;
-  transition: all ease-in 200ms;
+  background: transparent !important;
 }
 
 .footer__nav-icons {
@@ -24,4 +25,3 @@
   width: 40px;
   height: 57px;
 }
-

@@ -115,7 +115,13 @@
   font-weight: 900;
 }
 
-@media only screen and (max-width: 930px) {
+@media only screen and (max-width: 900px) {
+  .form-block{
+    margin-left: 24px;
+  }
+}
+
+@media only screen and (max-width: 776px) {
   .top-block {
     display: none;
   }

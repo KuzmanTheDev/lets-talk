@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { QueryClient, QueryClientProvider } from "react-query";
-import { RoleProvider } from "./Context/RoleContext";
 import { UsersProvider } from "./Context/UsersContext";
 import { AuthProvider } from "./Context/AuthContext";
 import { ReactQueryDevtools } from "react-query/devtools";
@@ -15,12 +14,10 @@ ReactDOM.render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
       <AuthProvider>
-        <RoleProvider>
-          <UsersProvider>
-            <App />
-            <ReactQueryDevtools />
-          </UsersProvider>
-        </RoleProvider>
+        <UsersProvider>
+          <App />
+          <ReactQueryDevtools />
+        </UsersProvider>
       </AuthProvider>
     </QueryClientProvider>
   </React.StrictMode>,

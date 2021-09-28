@@ -96,7 +96,7 @@
   color: #9ba4b0;
 }
 
-@media only screen and (max-width: 930px) {
+@media only screen and (max-width: 776px) {
   .layout {
     display: none;
   }

@@ -5,7 +5,7 @@ import DialogueBox from "../DialogueBox/DialogueBox";
 import "./Chat.css";
 
 export default function Chat({ match }) {
-  const web = useMediaQuery("(min-width : 930px)");
+  const web = useMediaQuery("(min-width : 776px)");
 
   return (
     <div>

@@ -51,7 +51,7 @@ export default function UserDetails({ values, nextStep, prevStep, onChange }) {
           type="primary"
           style={{
             position: "absolute",
-            width: "537px",
+            width: "520px",
             height: "56px",
             top: "535px",
           }}

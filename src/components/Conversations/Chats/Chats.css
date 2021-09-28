@@ -4,6 +4,8 @@
 }
 .search-block {
   height: 47px;
+  display: flex;
+  align-items: center;
   border-bottom: 1px solid #eaedf3;
   border-right: 1px solid #eaedf3;
 }

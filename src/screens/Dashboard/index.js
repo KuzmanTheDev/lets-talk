@@ -1,8 +1,9 @@
 import React from "react";
 import MobileDashboard from "../../components/Dashboard/MobileDashboard";
 import Conversations from "../../components/Conversations/Conversations";
+// import Convo from "../../components/MobileUI/Conversations/Convo";
 
-export default function index() {
+export default function Index() {
   return (
     <main>
       <div className="large-display">

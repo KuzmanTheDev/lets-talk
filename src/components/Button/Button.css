@@ -15,7 +15,6 @@ button {
 
 button.primary {
   background: #9a2219;
-  border: 1px solid #9a2219;
   border-radius: 5px;
   font-weight: bold;
   font-size: 18px;
@@ -24,7 +23,6 @@ button.primary {
 
 button.mobile {
   background: #9a2219;
-  /* border: 1px solid #9a2219; */
   border-radius: 5px;
   font-weight: bold;
   font-size: 18px;
@@ -40,12 +38,16 @@ button.disabled {
   cursor: default;
 }
 
-@media only screen and (max-width: 930px) {
+button.not_allowed {
+  cursor: not-allowed;
+}
+
+@media only screen and (max-width: 776px) {
   button.primary {
     display: none;
   }
 }
-@media only screen and (min-width: 930px) {
+@media only screen and (min-width: 776px) {
   button.mobile {
     display: none;
   }

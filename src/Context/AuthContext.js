@@ -9,10 +9,9 @@ const initialState = {
 const userData = ls.get("userData");
 if (userData) {
   initialState.user = userData;
-  console.log("we got token");
+  // const expiration = 20 * 60 * 60 * 1000;
 } else {
   initialState.user = null;
-  console.log("no token");
 }
 
 const AuthContext = createContext({
@@ -48,6 +47,9 @@ const AuthProvider = (props) => {
       type: "LOGIN",
       payload: data,
     });
+    // setTimeout(() => {
+    //   logout();
+    // }, 6000);
   }
   function logout() {
     const ls = new SecureLS();
