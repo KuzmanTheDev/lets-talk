@@ -49,7 +49,7 @@ const AuthProvider = (props) => {
     });
     // setTimeout(() => {
     //   logout();
-    // }, 6000);
+    // }, 10 * 1000);
   }
   function logout() {
     const ls = new SecureLS();

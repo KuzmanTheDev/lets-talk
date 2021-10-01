@@ -11,8 +11,8 @@ export default function StudentForm() {
     email: "",
     dateOfBirth: "",
     matricOrIDNumber: "",
-    faculty: "",
-    department: "",
+    faculty: "default",
+    department: "default",
     password: "",
     confirmPassword: "",
   });
@@ -62,17 +62,17 @@ export default function StudentForm() {
           />
         </Layout>
       );
-      case 4:
-        return (
-          <Layout>
-            <EmailConfirmation
-              values={values}
-              nextStep={nextStep}
-              prevStep={prevStep}
-              onChange={handleChange}
-            />
-          </Layout>
-        );
+    case 4:
+      return (
+        <Layout>
+          <EmailConfirmation
+            values={values}
+            nextStep={nextStep}
+            prevStep={prevStep}
+            onChange={handleChange}
+          />
+        </Layout>
+      );
     default:
     // do nothing
   }

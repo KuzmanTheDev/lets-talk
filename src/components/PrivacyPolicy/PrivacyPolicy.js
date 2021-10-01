@@ -23,41 +23,9 @@ export default function PrivacyPolicy() {
     // eslint-disable-next-line
   }, []);
 
-  function createRoom() {
-    socket.current.send(
-      JSON.stringify({
-        msgType: "CreateRoom",
-        createByUserID: `${userID}`,
-        roomName: "The New Room To Be Created",
-        roomIcon: "Image Link. For now we should use a default image of unilag",
-      })
-    );
-  }
-
-  // useEffect(() => {
-  //   socket.current.onmessage = (event) => {
-  //     const jsonContent = JSON.parse(event.data);
-  //     console.log("kdkkf", jsonContent);
-  //     switch (jsonContent.msgType) {
-  //       case WSMessageType.WebsocketOpen:
-  //         console.log("Its open");
-  //         break;
-  //       case WSMessageType.CreateRoom:
-  //         createRoom();
-  //         console.log("room created");
-  //         break;
-  //       case WSMessageType.NewMessage:
-  //         console.log("I sent a message");
-  //         break;
-  //       default:
-  //     }
-  //   };
-  //   // eslint-disable-next-line
-  // }, []);
-
   function connect() {
     socket.current = new WebSocket(
-      `ws://188.166.170.44:8080/v1/ws/${userID}/${wsTicket}`
+      `wss://188.166.170.44:8080/v1/ws/${userID}/${wsTicket}`
     );
   }
 
@@ -93,82 +61,16 @@ export default function PrivacyPolicy() {
         break;
     }
   }
-
-  // function sendMessage(e){
-  //   const data = JSON.parse(e.data)
-  // }
-
-  // function socketInit() {
-
-  //   socket.current.onopen = (e) => {
-  //     console.log("connected", e);
-  //     const message = {
-  //       msgType: WSMessageType.WebsocketOpen,
-  //       userID: userID,
-  //     };
-  //     socket.current.send(JSON.stringify(message));
-  //   };
-
-  //   socket.current.onerror = (e) => {
-  //     console.log(e);
-  //   };
-
-  //   socket.current.onclose = (e) => {
-  //     console.log("websocket closed.", e);
-  //   };
-
-  // }
-
-  // useEffect(() => {
-  //   socketInit();
-  // });
-
-  // useEffect(() => {
-  // const socket.current = new WebSocket(
-  //   `ws://188.166.170.44:8080/v1/ws/${userID}/${wsTicket}`
-  // );
-
-  // socket.current.onopen = (e) => {
-  //   console.log("connected", e);
-  //   const message = {
-  //     msgType: WSMessageType.WebsocketOpen,
-  //     userID: userID,
-  //   };
-  //   socket.current.send(JSON.stringify(message));
-  // };
-
-  // socket.current.onerror = (e) => {
-  //   console.log(e);
-  // };
-
-  // socket.current.onclose = (e) => {
-  //   console.log("websocket closed.", e);
-  // };
-  //   const createRoom = () => {
-  //     socket.current.send(
-  //       JSON.stringify({
-  //         msgType: "CreateRoom",
-  //         createByUserID: `${userID}`,
-  //         roomName: "The New Room To Be Created",
-  //         roomIcon:
-  //           "Image Link. For now we should use a default image of unilag",
-  //       })
-  //     );
-  //   };
-
-  //   const sendMessage = () => {
-  //     socket.current.send(
-  //       JSON.stringify({
-  //         msgType: "NewMessage",
-  //         roomID: "00000",
-  //         userID: `${userID}`,
-  //         message: "Hello There",
-  //         type: "Message",
-  //       })
-  //     );
-  //     console.log("send message");
-  //   };
-  // });
+  function createRoom() {
+    socket.current.send(
+      JSON.stringify({
+        msgType: "CreateRoom",
+        createByUserID: `${userID}`,
+        roomName: "The New Room To Be Created",
+        roomIcon: "Image Link. For now we should use a default image of unilag",
+      })
+    );
+  }
 
   return (
     <h1>

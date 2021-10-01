@@ -13,3 +13,15 @@ export function AuthRoute({ component: Component, ...rest }) {
     />
   );
 }
+
+export function ProtectRoute({ component: Component, ...rest }) {
+  const { user } = useContext(AuthContext);
+  return (
+    <Route
+      {...rest}
+      render={(props) =>
+        user ? <Component {...props} /> : <Redirect to="/login" />
+      }
+    />
+  );
+}

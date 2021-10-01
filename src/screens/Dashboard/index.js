@@ -1,18 +1,29 @@
 import React from "react";
-import MobileDashboard from "../../components/Dashboard/MobileDashboard";
 import Conversations from "../../components/Conversations/Conversations";
-// import Convo from "../../components/MobileUI/Conversations/Convo";
+import { useMediaQuery } from "../../utilities/MediaQuery";
+import Footer from "../../components/MobileUI/Footer/Footer";
+import ChatPreview from "../../components/Conversations/ChatPreview/ChatPreview";
+import { useUsersContext } from "../../Context/UsersContext";
 
 export default function Index() {
+  const web = useMediaQuery("(min-width : 776px)");
+  const { users: contacts } = useUsersContext();
+
   return (
     <main>
-      <div className="large-display">
+      {web ? (
         <Conversations />
-      </div>
-
-      <div className="small-display">
-        <MobileDashboard />
-      </div>
+      ) : (
+        <div>
+          <h2 className="convo-title">Conversations</h2>
+          <div className="chat-preview-block">
+            {contacts.map((contact, index) => (
+              <ChatPreview key={index} contact={contact} />
+            ))}
+          </div>
+          <Footer />
+        </div>
+      )}
     </main>
   );
 }

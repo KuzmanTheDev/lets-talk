@@ -35,13 +35,10 @@
   align-items: center;
 }
 .role-square:hover {
-  background: rgba(154, 34, 25, 0.1);
   cursor: pointer;
-  /* color: #0054fe; */
 }
 .role-square:hover + p,
 .role p:hover {
-  color: #9a2219;
   cursor: pointer;
 }
 .active {

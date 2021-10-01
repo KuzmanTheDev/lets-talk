@@ -40,7 +40,7 @@ export default function GetStarted() {
 
       <div className="welcome-block">
         <h2>Let's get started !</h2>
-        <p>Sign up as a lecturer or student...</p>
+        <p>Sign up by selecting a role below as a lecturer or student...</p>
 
         <div className="role-block">
           <div className="role">
