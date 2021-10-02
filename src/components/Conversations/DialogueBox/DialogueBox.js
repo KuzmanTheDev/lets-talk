@@ -1,7 +1,7 @@
 import React from "react";
 import ChatInput from "../ChatInpu/ChatInput";
-import "./DialogueBox.css";
 import DialogueHeader from "./DialogueHeader/DialogueHeader";
+import "./DialogueBox.css";
 
 export default function DialogueBox({ data }) {
   return (

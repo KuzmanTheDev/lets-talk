@@ -7,7 +7,6 @@ export default function PrivacyPolicy() {
     user: { userID, wsTicket },
   } = useContext(AuthContext);
 
-  console.log(userID, wsTicket);
   const socket = useRef(null);
   useEffect(() => {
     connect();

@@ -1,6 +1,7 @@
 .chats {
   display: flex;
   flex-direction: column;
+  height: 100vh;
 }
 .search-block {
   height: 47px;
@@ -27,8 +28,8 @@
 }
 .chat-preview-block {
   border-right: 1px solid #eaedf3;
-  height: 86vh;
-  overflow-y: auto;
+  height: calc(100% - 112px);
+  overflow-y: scroll;
 }
 
 .chats::-webkit-scrollbar,

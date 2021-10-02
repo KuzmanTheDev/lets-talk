@@ -795,6 +795,839 @@ const users = [
     group: false,
     pinned: false,
   },
+
+  {
+    id: 9,
+    profile_picture: ppGirl4,
+    name: "Beyoncé Knowles",
+    phone_number: "+2348123456789",
+    whatsapp_name: "Beyonce",
+    unread: 0,
+    messages: {
+      "04/06/2021": [
+        {
+          content: RandomSentence(),
+          sender: 8,
+          time: "08:11:26",
+          status: null,
+        },
+        {
+          content: RandomSentence(),
+          sender: null,
+          time: "08:15:45",
+          status: "read",
+        },
+        {
+          content: RandomSentence(),
+          sender: 8,
+          time: "09:11:26",
+          status: null,
+        },
+        {
+          content: RandomSentence(),
+          sender: null,
+          time: "09:15:45",
+          status: "read",
+        },
+      ],
+
+      TODAY: [
+        {
+          content: RandomSentence(),
+          sender: 8,
+          time: "08:11:26",
+          status: null,
+        },
+        {
+          content: RandomSentence(),
+          sender: null,
+          time: "08:15:45",
+          status: "read",
+        },
+        {
+          content: RandomSentence(),
+          sender: 8,
+          time: "09:11:26",
+          status: null,
+        },
+        {
+          content: RandomSentence(),
+          sender: null,
+          time: "09:15:45",
+          status: "read",
+        },
+      ],
+    },
+    group: false,
+    pinned: false,
+  },
+
+  {
+    id: 10,
+    profile_picture: ppGirl4,
+    name: "Beyoncé Knowles",
+    phone_number: "+2348123456789",
+    whatsapp_name: "Beyonce",
+    unread: 0,
+    messages: {
+      "04/06/2021": [
+        {
+          content: RandomSentence(),
+          sender: 8,
+          time: "08:11:26",
+          status: null,
+        },
+        {
+          content: RandomSentence(),
+          sender: null,
+          time: "08:15:45",
+          status: "read",
+        },
+        {
+          content: RandomSentence(),
+          sender: 8,
+          time: "09:11:26",
+          status: null,
+        },
+        {
+          content: RandomSentence(),
+          sender: null,
+          time: "09:15:45",
+          status: "read",
+        },
+      ],
+
+      TODAY: [
+        {
+          content: RandomSentence(),
+          sender: 8,
+          time: "08:11:26",
+          status: null,
+        },
+        {
+          content: RandomSentence(),
+          sender: null,
+          time: "08:15:45",
+          status: "read",
+        },
+        {
+          content: RandomSentence(),
+          sender: 8,
+          time: "09:11:26",
+          status: null,
+        },
+        {
+          content: RandomSentence(),
+          sender: null,
+          time: "09:15:45",
+          status: "read",
+        },
+      ],
+    },
+    group: false,
+    pinned: false,
+  },
+
+  {
+    id: 11,
+    profile_picture: ppGirl4,
+    name: "Beyoncé Knowles",
+    phone_number: "+2348123456789",
+    whatsapp_name: "Beyonce",
+    unread: 0,
+    messages: {
+      "04/06/2021": [
+        {
+          content: RandomSentence(),
+          sender: 8,
+          time: "08:11:26",
+          status: null,
+        },
+        {
+          content: RandomSentence(),
+          sender: null,
+          time: "08:15:45",
+          status: "read",
+        },
+        {
+          content: RandomSentence(),
+          sender: 8,
+          time: "09:11:26",
+          status: null,
+        },
+        {
+          content: RandomSentence(),
+          sender: null,
+          time: "09:15:45",
+          status: "read",
+        },
+      ],
+    },
+    group: false,
+    pinned: false,
+  },
+
+  {
+    id: 12,
+    profile_picture: ppGirl4,
+    name: "Beyoncé Knowles",
+    phone_number: "+2348123456789",
+    whatsapp_name: "Beyonce",
+    unread: 0,
+    group: false,
+    pinned: false,
+  },
+
+  {
+    id: 13,
+    profile_picture: ppGirl4,
+    name: "Beyoncé Knowles",
+    phone_number: "+2348123456789",
+    whatsapp_name: "Beyonce",
+    unread: 0,
+    messages: {
+      "04/06/2021": [
+        {
+          content: RandomSentence(),
+          sender: 8,
+          time: "08:11:26",
+          status: null,
+        },
+        {
+          content: RandomSentence(),
+          sender: null,
+          time: "08:15:45",
+          status: "read",
+        },
+        {
+          content: RandomSentence(),
+          sender: 8,
+          time: "09:11:26",
+          status: null,
+        },
+        {
+          content: RandomSentence(),
+          sender: null,
+          time: "09:15:45",
+          status: "read",
+        },
+      ],
+
+      YESTERDAY: [
+        {
+          content: RandomSentence(),
+          sender: 8,
+          time: "08:11:26",
+          status: null,
+        },
+        {
+          content: RandomSentence(),
+          sender: null,
+          time: "08:15:45",
+          status: "read",
+        },
+        {
+          content: RandomSentence(),
+          sender: 8,
+          time: "09:11:26",
+          status: null,
+        },
+        {
+          content: RandomSentence(),
+          sender: null,
+          time: "09:15:45",
+          status: "read",
+        },
+      ],
+
+      TODAY: [
+        {
+          content: RandomSentence(),
+          sender: 8,
+          time: "08:11:26",
+          status: null,
+        },
+        {
+          content: RandomSentence(),
+          sender: null,
+          time: "08:15:45",
+          status: "read",
+        },
+        {
+          content: RandomSentence(),
+          sender: 8,
+          time: "09:11:26",
+          status: null,
+        },
+        {
+          content: RandomSentence(),
+          sender: null,
+          time: "09:15:45",
+          status: "read",
+        },
+      ],
+    },
+    group: false,
+    pinned: false,
+  },
+
+  {
+    id: 8,
+    profile_picture: ppGirl4,
+    name: "Beyoncé Knowles",
+    phone_number: "+2348123456789",
+    whatsapp_name: "Beyonce",
+    unread: 0,
+    messages: {
+      "04/06/2021": [
+        {
+          content: RandomSentence(),
+          sender: 8,
+          time: "08:11:26",
+          status: null,
+        },
+        {
+          content: RandomSentence(),
+          sender: null,
+          time: "08:15:45",
+          status: "read",
+        },
+        {
+          content: RandomSentence(),
+          sender: 8,
+          time: "09:11:26",
+          status: null,
+        },
+        {
+          content: RandomSentence(),
+          sender: null,
+          time: "09:15:45",
+          status: "read",
+        },
+      ],
+
+      YESTERDAY: [
+        {
+          content: RandomSentence(),
+          sender: 8,
+          time: "08:11:26",
+          status: null,
+        },
+        {
+          content: RandomSentence(),
+          sender: null,
+          time: "08:15:45",
+          status: "read",
+        },
+        {
+          content: RandomSentence(),
+          sender: 8,
+          time: "09:11:26",
+          status: null,
+        },
+        {
+          content: RandomSentence(),
+          sender: null,
+          time: "09:15:45",
+          status: "read",
+        },
+      ],
+
+      TODAY: [
+        {
+          content: RandomSentence(),
+          sender: 8,
+          time: "08:11:26",
+          status: null,
+        },
+        {
+          content: RandomSentence(),
+          sender: null,
+          time: "08:15:45",
+          status: "read",
+        },
+        {
+          content: RandomSentence(),
+          sender: 8,
+          time: "09:11:26",
+          status: null,
+        },
+        {
+          content: RandomSentence(),
+          sender: null,
+          time: "09:15:45",
+          status: "read",
+        },
+      ],
+    },
+    group: false,
+    pinned: false,
+  },
+
+  {
+    id: 8,
+    profile_picture: ppGirl4,
+    name: "Beyoncé Knowles",
+    phone_number: "+2348123456789",
+    whatsapp_name: "Beyonce",
+    unread: 0,
+    messages: {
+      "04/06/2021": [
+        {
+          content: RandomSentence(),
+          sender: 8,
+          time: "08:11:26",
+          status: null,
+        },
+        {
+          content: RandomSentence(),
+          sender: null,
+          time: "08:15:45",
+          status: "read",
+        },
+        {
+          content: RandomSentence(),
+          sender: 8,
+          time: "09:11:26",
+          status: null,
+        },
+        {
+          content: RandomSentence(),
+          sender: null,
+          time: "09:15:45",
+          status: "read",
+        },
+      ],
+
+      YESTERDAY: [
+        {
+          content: RandomSentence(),
+          sender: 8,
+          time: "08:11:26",
+          status: null,
+        },
+        {
+          content: RandomSentence(),
+          sender: null,
+          time: "08:15:45",
+          status: "read",
+        },
+        {
+          content: RandomSentence(),
+          sender: 8,
+          time: "09:11:26",
+          status: null,
+        },
+        {
+          content: RandomSentence(),
+          sender: null,
+          time: "09:15:45",
+          status: "read",
+        },
+      ],
+
+      TODAY: [
+        {
+          content: RandomSentence(),
+          sender: 8,
+          time: "08:11:26",
+          status: null,
+        },
+        {
+          content: RandomSentence(),
+          sender: null,
+          time: "08:15:45",
+          status: "read",
+        },
+        {
+          content: RandomSentence(),
+          sender: 8,
+          time: "09:11:26",
+          status: null,
+        },
+        {
+          content: RandomSentence(),
+          sender: null,
+          time: "09:15:45",
+          status: "read",
+        },
+      ],
+    },
+    group: false,
+    pinned: false,
+  },
+
+  {
+    id: 8,
+    profile_picture: ppGirl4,
+    name: "Beyoncé Knowles",
+    phone_number: "+2348123456789",
+    whatsapp_name: "Beyonce",
+    unread: 0,
+    messages: {
+      "04/06/2021": [
+        {
+          content: RandomSentence(),
+          sender: 8,
+          time: "08:11:26",
+          status: null,
+        },
+        {
+          content: RandomSentence(),
+          sender: null,
+          time: "08:15:45",
+          status: "read",
+        },
+        {
+          content: RandomSentence(),
+          sender: 8,
+          time: "09:11:26",
+          status: null,
+        },
+        {
+          content: RandomSentence(),
+          sender: null,
+          time: "09:15:45",
+          status: "read",
+        },
+      ],
+
+      YESTERDAY: [
+        {
+          content: RandomSentence(),
+          sender: 8,
+          time: "08:11:26",
+          status: null,
+        },
+        {
+          content: RandomSentence(),
+          sender: null,
+          time: "08:15:45",
+          status: "read",
+        },
+        {
+          content: RandomSentence(),
+          sender: 8,
+          time: "09:11:26",
+          status: null,
+        },
+        {
+          content: RandomSentence(),
+          sender: null,
+          time: "09:15:45",
+          status: "read",
+        },
+      ],
+
+      TODAY: [
+        {
+          content: RandomSentence(),
+          sender: 8,
+          time: "08:11:26",
+          status: null,
+        },
+        {
+          content: RandomSentence(),
+          sender: null,
+          time: "08:15:45",
+          status: "read",
+        },
+        {
+          content: RandomSentence(),
+          sender: 8,
+          time: "09:11:26",
+          status: null,
+        },
+        {
+          content: RandomSentence(),
+          sender: null,
+          time: "09:15:45",
+          status: "read",
+        },
+      ],
+    },
+    group: false,
+    pinned: false,
+  },
+
+  {
+    id: 8,
+    profile_picture: ppGirl4,
+    name: "Beyoncé Knowles",
+    phone_number: "+2348123456789",
+    whatsapp_name: "Beyonce",
+    unread: 0,
+    messages: {
+      "04/06/2021": [
+        {
+          content: RandomSentence(),
+          sender: 8,
+          time: "08:11:26",
+          status: null,
+        },
+        {
+          content: RandomSentence(),
+          sender: null,
+          time: "08:15:45",
+          status: "read",
+        },
+        {
+          content: RandomSentence(),
+          sender: 8,
+          time: "09:11:26",
+          status: null,
+        },
+        {
+          content: RandomSentence(),
+          sender: null,
+          time: "09:15:45",
+          status: "read",
+        },
+      ],
+
+      YESTERDAY: [
+        {
+          content: RandomSentence(),
+          sender: 8,
+          time: "08:11:26",
+          status: null,
+        },
+        {
+          content: RandomSentence(),
+          sender: null,
+          time: "08:15:45",
+          status: "read",
+        },
+        {
+          content: RandomSentence(),
+          sender: 8,
+          time: "09:11:26",
+          status: null,
+        },
+        {
+          content: RandomSentence(),
+          sender: null,
+          time: "09:15:45",
+          status: "read",
+        },
+      ],
+
+      TODAY: [
+        {
+          content: RandomSentence(),
+          sender: 8,
+          time: "08:11:26",
+          status: null,
+        },
+        {
+          content: RandomSentence(),
+          sender: null,
+          time: "08:15:45",
+          status: "read",
+        },
+        {
+          content: RandomSentence(),
+          sender: 8,
+          time: "09:11:26",
+          status: null,
+        },
+        {
+          content: RandomSentence(),
+          sender: null,
+          time: "09:15:45",
+          status: "read",
+        },
+      ],
+    },
+    group: false,
+    pinned: false,
+  },
+
+  {
+    id: 8,
+    profile_picture: ppGirl4,
+    name: "Beyoncé Knowles",
+    phone_number: "+2348123456789",
+    whatsapp_name: "Beyonce",
+    unread: 0,
+    messages: {
+      "04/06/2021": [
+        {
+          content: RandomSentence(),
+          sender: 8,
+          time: "08:11:26",
+          status: null,
+        },
+        {
+          content: RandomSentence(),
+          sender: null,
+          time: "08:15:45",
+          status: "read",
+        },
+        {
+          content: RandomSentence(),
+          sender: 8,
+          time: "09:11:26",
+          status: null,
+        },
+        {
+          content: RandomSentence(),
+          sender: null,
+          time: "09:15:45",
+          status: "read",
+        },
+      ],
+
+      YESTERDAY: [
+        {
+          content: RandomSentence(),
+          sender: 8,
+          time: "08:11:26",
+          status: null,
+        },
+        {
+          content: RandomSentence(),
+          sender: null,
+          time: "08:15:45",
+          status: "read",
+        },
+        {
+          content: RandomSentence(),
+          sender: 8,
+          time: "09:11:26",
+          status: null,
+        },
+        {
+          content: RandomSentence(),
+          sender: null,
+          time: "09:15:45",
+          status: "read",
+        },
+      ],
+
+      TODAY: [
+        {
+          content: RandomSentence(),
+          sender: 8,
+          time: "08:11:26",
+          status: null,
+        },
+        {
+          content: RandomSentence(),
+          sender: null,
+          time: "08:15:45",
+          status: "read",
+        },
+        {
+          content: RandomSentence(),
+          sender: 8,
+          time: "09:11:26",
+          status: null,
+        },
+        {
+          content: RandomSentence(),
+          sender: null,
+          time: "09:15:45",
+          status: "read",
+        },
+      ],
+    },
+    group: false,
+    pinned: false,
+  },
+
+  {
+    id: 8,
+    profile_picture: ppGirl4,
+    name: "Beyoncé Knowles",
+    phone_number: "+2348123456789",
+    whatsapp_name: "Beyonce",
+    unread: 0,
+    messages: {
+      "04/06/2021": [
+        {
+          content: RandomSentence(),
+          sender: 8,
+          time: "08:11:26",
+          status: null,
+        },
+        {
+          content: RandomSentence(),
+          sender: null,
+          time: "08:15:45",
+          status: "read",
+        },
+        {
+          content: RandomSentence(),
+          sender: 8,
+          time: "09:11:26",
+          status: null,
+        },
+        {
+          content: RandomSentence(),
+          sender: null,
+          time: "09:15:45",
+          status: "read",
+        },
+      ],
+
+      YESTERDAY: [
+        {
+          content: RandomSentence(),
+          sender: 8,
+          time: "08:11:26",
+          status: null,
+        },
+        {
+          content: RandomSentence(),
+          sender: null,
+          time: "08:15:45",
+          status: "read",
+        },
+        {
+          content: RandomSentence(),
+          sender: 8,
+          time: "09:11:26",
+          status: null,
+        },
+        {
+          content: RandomSentence(),
+          sender: null,
+          time: "09:15:45",
+          status: "read",
+        },
+      ],
+
+      TODAY: [
+        {
+          content: RandomSentence(),
+          sender: 8,
+          time: "08:11:26",
+          status: null,
+        },
+        {
+          content: RandomSentence(),
+          sender: null,
+          time: "08:15:45",
+          status: "read",
+        },
+        {
+          content: RandomSentence(),
+          sender: 8,
+          time: "09:11:26",
+          status: null,
+        },
+        {
+          content: RandomSentence(),
+          sender: null,
+          time: "09:15:45",
+          status: "read",
+        },
+      ],
+    },
+    group: false,
+    pinned: false,
+  },
 ];
 
 export default users;

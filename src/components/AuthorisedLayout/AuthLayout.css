@@ -69,7 +69,7 @@
 .right-block {
   position: fixed;
   left: 255px;
-  width: 100%;
+  width: calc(100% - 255px);
 }
 .footer {
   position: fixed;

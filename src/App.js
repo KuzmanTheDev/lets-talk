@@ -24,13 +24,13 @@ function App() {
       <AuthRoute path="/signup" component={Form} />
       <AuthRoute path="/login" component={LogIn} />
       <ProtectRoute exact path="/chat" component={Dashboard} />
-      <Route exact path="/admin" component={Admin} />
-      <Route path="/chat/:id" component={Chat} />
-      <Route path="/admin/dashboard" component={AdminDashboard} />
-      <Route path="/success" component={Success} />
-      <Route path="/recover-password" component={RecoverPassword} />
-      <Route path="/privacy-policy" component={PrivacyPolicy} />
-      <Route path="/video" component={Video} />
+      <ProtectRoute exact path="/admin" component={Admin} />
+      <ProtectRoute path="/chat/:id" component={Chat} />
+      <ProtectRoute path="/admin/dashboard" component={AdminDashboard} />
+      <ProtectRoute path="/success" component={Success} />
+      <ProtectRoute path="/recover-password" component={RecoverPassword} />
+      <ProtectRoute path="/privacy-policy" component={PrivacyPolicy} />
+      <ProtectRoute path="/video" component={Video} />
       <ProtectRoute path="/account" component={Account} />
       <ProtectRoute path="/help" component={NeedHelp} />
       <ProtectRoute path="/image-upload" component={ImageUpload} />

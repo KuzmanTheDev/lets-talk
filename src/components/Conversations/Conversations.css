@@ -1,6 +1,7 @@
 .conversations {
   display: flex;
   flex-direction: column;
+  height: 100vh;
 }
 .chats-block {
   display: grid;

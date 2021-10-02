@@ -1,19 +1,15 @@
 .dialogue-box {
-  height: 92vh;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   background: #f8fafd;
   border-top: 1px solid #eaedf3;
   border-left: 1px solid #eaedf3;
-}
-
-.dialogue-header {
-  display: flex;
-  justify-content: space-between;
+  width: 100%;
 }
 
 .dialogue-content {
-  height: 84vh;
+  height: calc(100vh - 138px);
+  width: 100%;
+  /* background: aquamarine; */
 }
-

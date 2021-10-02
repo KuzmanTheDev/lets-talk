@@ -4,6 +4,8 @@
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #eaedf3;
+  width: 100%;
+  /* margin: auto; */
 }
 
 .dialogue-header p {
@@ -13,10 +15,12 @@
 .dialogue-header_tools {
   margin-left: 18px;
   height: 23px;
-  border-left: 1px solid black;
+  border-left: 1px solid #00000033;
+  /* margin-right: calc(50% / 2); */
 }
 
 .dialogue-header_tools img {
-  width: 23.125px;
-  height: 13.875px;
+  margin-right: 25px;
+  cursor: pointer;
+  height: 17.875px;
 }
