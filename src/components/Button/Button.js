@@ -1,5 +1,4 @@
 import React from "react";
-// import loader from "../../assets/images/loading.js";
 import Spinner from "../Spinner/Spinner.js";
 import "./Button.css";
 
