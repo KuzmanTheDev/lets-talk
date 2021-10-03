@@ -6,6 +6,7 @@ import attachment from "../../../../assets/images/attachmentIcon.png";
 import "./DialogueHeader.css";
 
 export default function DialogueHeader() {
+ 
   return (
     <div className="dialogue-header">
       <p>Okemati Lanre</p>

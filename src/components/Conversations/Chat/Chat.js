@@ -7,6 +7,14 @@ import "./Chat.css";
 export default function Chat({ match }) {
   const web = useMediaQuery("(min-width : 776px)");
 
+ //TODO: @Michael
+ const startPeerConnection =()=>{
+//Start a Videocall 
+}
+const joinPeerConnection =()=>{
+  //Join a videocall request
+}
+
   return (
     <div>
       {web ? (
