@@ -1,0 +1,17 @@
+.chat__input-wrapper {
+  width: inherit;
+  display: grid;
+  grid-template-columns: 80% 20%;
+  background: white;
+  padding: 22px 19px;
+}
+
+.chat__input-wrapper input {
+  font-family: "Axiforma Regular";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  border: none;
+  outline: none;
+}

@@ -1,18 +1,50 @@
-import React from "react";
+import React, { useContext, useState } from "react";
+import { AuthContext } from "../../../Context/AuthContext";
+import { MessageType, WSMessageType } from "../../../utilities/Constants";
+import Button from "../../Button/Button";
+import "./ChatInput.css";
 
-export default function ChatInput() {
+export default function ChatInput({ roomID, sendWSMessage }) {
+  const [messageValue, setMessageValue] = useState("");
+  const {
+    user: { userID },
+  } = useContext(AuthContext);
   const detectEnterPress = (e) => {
     if (e.key === "Enter" || e.keyCode === 13) {
-    //   submitNewMessage();
+      sendMessage();
     }
   };
+
+  function sendMessage() {
+    if (!messageValue.match(/\S/)) return;
+    const message = {
+      msgType: WSMessageType.NewMessage,
+      userID: userID,
+      roomID: roomID,
+      message: messageValue,
+      type: MessageType.Message,
+    };
+    sendWSMessage(JSON.stringify(message));
+    setMessageValue("");
+  }
   return (
     <div className="chat__input-wrapper">
       <input
         className="chat__input"
         placeholder="Type a message"
-        // onChange={(e) => setNewMessage(e.target.value)}
+        onChange={(e) => setMessageValue(e.target.value)}
+        value={messageValue}
         onKeyDown={detectEnterPress}
+      />
+      <Button
+        text="SEND"
+        type="secondary"
+        style={{
+          width: "79px",
+          height: "36px",
+          marginLeft: "auto",
+        }}
+        onClick={sendMessage}
       />
     </div>
   );

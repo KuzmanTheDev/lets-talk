@@ -26,6 +26,7 @@ const authReducer = (state, action) => {
       return {
         ...state,
         user: action.payload,
+        // homeData: action.payload
       };
     case "LOGOUT":
       return {

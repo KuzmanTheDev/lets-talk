@@ -5,11 +5,11 @@ import video from "../../../../assets/images/meetingCamera.png";
 import attachment from "../../../../assets/images/attachmentIcon.png";
 import "./DialogueHeader.css";
 
-export default function DialogueHeader() {
- 
+export default function DialogueHeader({ roomName }) {
+  // console.log(chatInfo);
   return (
     <div className="dialogue-header">
-      <p>Okemati Lanre</p>
+      <p>{roomName}</p>
 
       <div className="dialogue-header_tools">
         <Link to="/video">

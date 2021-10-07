@@ -14,7 +14,7 @@ export default function UserDetails() {
     email: "150408002@live.unilag.edu.ng",
     password: "michaelUti",
   });
-  
+
   const [errors, setErrors] = useState({
     email: [],
     password: [],
@@ -32,6 +32,7 @@ export default function UserDetails() {
     onSuccess: ({ data: userdata }) => {
       history.push("/chat");
       context.login(userdata);
+      console.log(userdata);
     },
   });
 

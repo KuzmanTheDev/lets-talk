@@ -20,6 +20,13 @@ button.primary {
   font-size: 18px;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
 }
+button.secondary {
+  background: #9a2219;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+}
 
 button.mobile {
   background: #9a2219;

@@ -60,21 +60,56 @@ export default function PrivacyPolicy() {
         break;
     }
   }
+//  function onWebsocketOpen (
+//     joinedRooms,
+//     joinRequests
+//   ) {
+//     if (joinedRooms) {
+//       setJoinedRooms(joinedRooms);
+//     }
+//     if (joinRequests) {
+//       this.joinRequests = joinRequests;
+//       this.unreadNotificationsCount = joinRequests.length;
+//       console.log(this.unreadNotificationsCount);
+//     }
+//   },
   function createRoom() {
     socket.current.send(
       JSON.stringify({
         msgType: "CreateRoom",
         createByUserID: `${userID}`,
-        roomName: "The New Room To Be Created",
+        roomName: "Engineering",
         roomIcon: "Image Link. For now we should use a default image of unilag",
       })
     );
   }
+  function sendWSMessage(message, roomID) {
+    const socketMessage = {
+      msgType: WSMessageType.RequestMessages,
+      userID: this.userID,
+      roomID: roomID,
+      firstLoad: true,
+    };
+    socket.current.send(socketMessage);
+    console.log("i clicked");
+  }
+  // function onRequestMessages(roomDetails) {
+  //   // socket.current.send(
+  //   //   JSON.stringify({
+  //   //     msgType: "RequestMessages",
+  //   //     roomID: `${id}`,
+  //   //     skip: 0,
+  //   //     limit: 0,
+  //   //   })
+  //   // );
+  //   console.log("request message");
+  // }
+  
 
   return (
     <h1>
-      <button onClick={createRoom} style={{ margin: "20px" }}>
-        Create Room
+      <button onClick={sendWSMessage} style={{ margin: "20px" }}>
+        send message
       </button>
       {/* <button onClick={sendMessage}> Click me </button> */}
       Hello

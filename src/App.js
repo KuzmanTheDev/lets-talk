@@ -15,10 +15,8 @@ import NeedHelp from "./components/NeedHelp/NeedHelp";
 import { AuthRoute, ProtectRoute } from "./utilities/Route";
 import PrivacyPolicy from "./components/PrivacyPolicy/PrivacyPolicy";
 import Video from "./components/Video/Video";
-import SecureLS from "secure-ls";
 import "./App.css";
 
-// import { GetToken } from "./utilities/GetToken";
 
 function App() {
   let routes = (

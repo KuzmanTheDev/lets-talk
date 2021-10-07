@@ -9,7 +9,16 @@
 }
 
 .dialogue-content {
-  height: calc(100vh - 138px);
+  height: calc(100vh - 179px);
   width: 100%;
   /* background: aquamarine; */
+}
+
+.room_info {
+  font-size: 10px;
+  border: 1px solid rgb(158, 155, 155);
+  border-radius: 3px;
+  width: max-content;
+  background-color: rgb(183, 202, 194);
+  margin: auto;
 }
