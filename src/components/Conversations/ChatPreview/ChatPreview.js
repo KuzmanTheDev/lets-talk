@@ -7,7 +7,8 @@ export default function ChatPreview({ roomInfo, activeChat }) {
     <div
       className="chat-preview"
       style={{
-        background: activeChat === roomInfo._id ? "rgb(33 35 36 / 10%)" : "",
+        background:
+          activeChat === roomInfo._id ? "rgba(160, 174, 192, 0.1)" : "",
       }}
     >
       <div>

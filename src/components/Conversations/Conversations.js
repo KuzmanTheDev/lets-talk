@@ -7,10 +7,10 @@ import Layout from "../AuthorisedLayout/AuthLayout";
 import DialogueBox from "./DialogueBox/DialogueBox";
 import "./Conversations.css";
 
-export default function Conversations({ data, req, create, roomContents, send }) {
+export default function Conversations({ data, create, roomContents, send }) {
   const [convo, setConvo] = useState(null);
-  const [roomName, setRoomName] = useState("")
-  const [roomID, setRoomID] = useState(null)
+  const [roomName, setRoomName] = useState("");
+  // const [roomID, setRoomID] = useState(null);
 
   // console.log(data.data)
 
@@ -21,12 +21,12 @@ export default function Conversations({ data, req, create, roomContents, send })
   };
 
   const onRoomName = (name) => {
-    setRoomName(name)
+    setRoomName(name);
   };
-  const onRoomID = (id) => {
-    setRoomName(id)
-  };
-  
+  // const onRoomID = (id) => {
+  //   setRoomID(id);
+  // };
+
   return (
     <Layout>
       <div className="conversations">
@@ -35,7 +35,12 @@ export default function Conversations({ data, req, create, roomContents, send })
         </div>
         <div className="chats-block">
           <div>
-            <Chats chats={data} getChat={onChat} getRoomDetails={req} sendWSMessage={send} getRoomName={onRoomName} />
+            <Chats
+              chats={data}
+              getChat={onChat}
+              sendWSMessage={send}
+              getRoomName={onRoomName}
+            />
           </div>
           {convo ? (
             <DialogueBox
@@ -43,7 +48,7 @@ export default function Conversations({ data, req, create, roomContents, send })
               createRoom={create}
               roomData={roomContents}
               name={roomName}
-              getRoomID={onRoomID}
+              // getRoomID={onRoomID}
               sendWSMessage={send}
             />
           ) : (

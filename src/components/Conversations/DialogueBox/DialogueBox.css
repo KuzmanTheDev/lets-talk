@@ -7,18 +7,32 @@
   border-left: 1px solid #eaedf3;
   width: 100%;
 }
-
 .dialogue-content {
   height: calc(100vh - 179px);
   width: 100%;
-  /* background: aquamarine; */
 }
 
-.room_info {
+.user {
+  text-align: right;
+  margin-left: auto;
+  color: #51606d;
+}
+.message {
+  padding: 11px 14px;
+  background: #eaeff4;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  margin-right: 30px;
+  width: fit-content;
+  font-family: "Axiforma Regular";
+  font-size: 12px;
+  line-height: 20px;
+}
+.NewInfo {
   font-size: 10px;
   border: 1px solid rgb(158, 155, 155);
   border-radius: 3px;
   width: max-content;
-  background-color: rgb(183, 202, 194);
+  background-color: rgba(221, 229, 230, 0.644);
   margin: auto;
 }

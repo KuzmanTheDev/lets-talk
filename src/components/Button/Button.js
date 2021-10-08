@@ -14,7 +14,7 @@ export default function Button({
     <button
       style={style}
       type="button"
-      className={`${type} ${disabled ? "disabled loading" : ""} ${
+      className={`${type} ${disabled ? "disabled" : ""} ${
         loading ? "not_allowed" : ""
       } ripple`}
       onClick={onClick}

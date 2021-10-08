@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../../../Context/AuthContext";
 import ChatInput from "../ChatInpu/ChatInput";
 import DialogueHeader from "./DialogueHeader/DialogueHeader";
 import "./DialogueBox.css";
@@ -9,57 +10,29 @@ export default function DialogueBox({
   name,
   sendWSMessage,
 }) {
+  const {
+    user: { userID },
+  } = useContext(AuthContext);
   const [messages, setMessages] = useState([]);
-  // const [Info, Info] = useState([]);
 
   useEffect(() => {
-    setMessages(roomData?.data?.data || []);
+    setMessages(roomData || []);
   }, [roomData]);
-  // console.log(roomData?.data?.data, "messages");
-  // console.log(messages, "m");
 
-  // const create = () => {
-  //   createRoom();
-  // };
   return (
     <div className="dialogue-box">
       <DialogueHeader roomName={name} />
       <div className="dialogue-content">
         {messages.map((message, index) => (
-          <p
+          <div
             key={index}
-            className="room_info"
-            style={{
-              display: message.type === "NewInfo" ? "block" : "none",
-            }}
+            className={`${message.type} ${message.userID === userID ? "user" : ""} message`}
           >
             {message?.message}
-          </p>
+          </div>
         ))}
-
-        {/* // style={{ */}
-        {/* //   display:
-//     roomData?.data?.data[0]?.type === "Message" ? "block" : "none",
-// }} */}
-        {messages.map((message, index) => (
-          <p
-            key={index}
-            className="room_message"
-            style={{
-              display: message.type === "Message" ? "block" : "none",
-            }}
-          >
-            {message?.message}
-          </p>
-        ))}
-
-        {/* <button onClick={create}>Create</button> */}
       </div>
-
-      <ChatInput
-        roomID={roomData?.data?.data[0]?.roomID}
-        sendWSMessage={sendWSMessage}
-      />
+      <ChatInput roomID={roomData[0]?.roomID} sendWSMessage={sendWSMessage} />
     </div>
   );
 }
