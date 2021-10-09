@@ -2,12 +2,14 @@
   width: inherit;
   display: grid;
   grid-template-columns: 80% 20%;
+  align-items: center;
   background: white;
-  padding: 22px 19px;
+  padding: 11px 19px;
 }
 
 .chat__input-wrapper input {
   font-family: "Axiforma Regular";
+  height: 45px;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;

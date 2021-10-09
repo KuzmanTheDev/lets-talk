@@ -5,11 +5,11 @@ import search from "../../../assets/images/search.png";
 import "./Chats.css";
 import { AuthContext } from "../../../Context/AuthContext";
 
-export default function Chats({ chats, getChat, sendWSMessage, getRoomName }) {
+export default function Chats({ chats, getChat, sendWSMessage, getRoomName, roomData }) {
   const {
     user: { userID },
   } = useContext(AuthContext);
-  // console.log(chats?.joinedRooms?.data[0]);
+  // console.log(chats?.roomList?.data, "rd");
 const [currentRoom, setCurrentRoom] = useState(null)
 
   function getChatContent(roomID) {
@@ -44,7 +44,7 @@ const [currentRoom, setCurrentRoom] = useState(null)
             }}
             style={{ cursor: "pointer" }}
           >
-            <ChatPreview roomInfo={room}  activeChat={currentRoom}/>
+            <ChatPreview roomsInfo={room}  activeChat={currentRoom} />
           </div>
         ))}
       </div>

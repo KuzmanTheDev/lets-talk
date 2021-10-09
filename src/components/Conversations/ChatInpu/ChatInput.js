@@ -17,7 +17,6 @@ export default function ChatInput({ roomID, sendWSMessage }) {
   // console.log(roomID, sendWSMessage);
 
   function sendMessage() {
-    // if (!messageValue.match(/\S/)) return;
     const message = {
       msgType: WSMessageType.NewMessage,
       userID: userID,

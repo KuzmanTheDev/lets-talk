@@ -1,8 +1,19 @@
-.filter {
+.create {
   height: 65px;
   border-bottom: 1px solid #eaedf3;
+  display: flex;
+  align-items: center;
 }
-
+.create_icon {
+  margin: 0 28px;
+}
+.create img {
+  width: 26px;
+  cursor: pointer;
+}
+.create p {
+  margin-top: 15px;
+}
 .filter-icon {
   position: fixed;
   top: 24px;

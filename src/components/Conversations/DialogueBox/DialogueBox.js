@@ -4,12 +4,7 @@ import ChatInput from "../ChatInpu/ChatInput";
 import DialogueHeader from "./DialogueHeader/DialogueHeader";
 import "./DialogueBox.css";
 
-export default function DialogueBox({
-  createRoom,
-  roomData,
-  name,
-  sendWSMessage,
-}) {
+export default function DialogueBox({ roomData, name, sendWSMessage }) {
   const {
     user: { userID },
   } = useContext(AuthContext);
@@ -17,6 +12,7 @@ export default function DialogueBox({
 
   useEffect(() => {
     setMessages(roomData || []);
+    // console.log(roomData, "rm");
   }, [roomData]);
 
   return (
@@ -26,7 +22,9 @@ export default function DialogueBox({
         {messages.map((message, index) => (
           <div
             key={index}
-            className={`${message.type} ${message.userID === userID ? "user" : ""} message`}
+            className={`${message.type} ${
+              message.userID === userID ? "user" : ""
+            } message`}
           >
             {message?.message}
           </div>

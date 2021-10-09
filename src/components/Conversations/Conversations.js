@@ -1,37 +1,36 @@
 import React, { useState } from "react";
-// import { useQuery } from "react-query";
 import Chats from "./Chats/Chats";
 import Filter from "./Filter/Filter";
 import speechBubble from "../../assets/images/speech-bubble.png";
 import Layout from "../AuthorisedLayout/AuthLayout";
 import DialogueBox from "./DialogueBox/DialogueBox";
+import Modal from "../CreateRoom Modal/Modal";
+import Backdrop from "../Backdrop/Backdrop";
 import "./Conversations.css";
 
 export default function Conversations({ data, create, roomContents, send }) {
   const [convo, setConvo] = useState(null);
   const [roomName, setRoomName] = useState("");
-  // const [roomID, setRoomID] = useState(null);
-
-  // console.log(data.data)
+  const [visibility, setVisibility] = useState(false);
+  // console.log(data, "rc");
 
   const onChat = () => {
     setConvo(true);
-    // req();
-    // setRoomDetails(data.roomList.data.)
   };
-
   const onRoomName = (name) => {
     setRoomName(name);
   };
-  // const onRoomID = (id) => {
-  //   setRoomID(id);
-  // };
+  const toggleVisibility = () => {
+    setVisibility(!visibility);
+  };
 
   return (
     <Layout>
       <div className="conversations">
+        <Backdrop visible={visibility}  />
+        <Modal visible={visibility} toggle={toggleVisibility} sendWSMessage={send}/>
         <div className="filter-block">
-          <Filter />
+          <Filter toggle={toggleVisibility} />
         </div>
         <div className="chats-block">
           <div>
@@ -40,12 +39,12 @@ export default function Conversations({ data, create, roomContents, send }) {
               getChat={onChat}
               sendWSMessage={send}
               getRoomName={onRoomName}
+              roomData={roomContents}
             />
           </div>
           {convo ? (
             <DialogueBox
               chatData={data}
-              createRoom={create}
               roomData={roomContents}
               name={roomName}
               // getRoomID={onRoomID}

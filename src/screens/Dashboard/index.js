@@ -11,7 +11,6 @@ const ls = new SecureLS();
 
 export default function Index() {
   const [homeData, setHomeData] = useState({});
-  // const [currentRoomMessages, setCurrentRoomMessages] = useState([]);
   const [roomContents, setRoomContents] = useState([]);
   const web = useMediaQuery("(min-width : 776px)");
   const {
@@ -83,52 +82,50 @@ export default function Index() {
         // setRooms(jsonContent.joinedRooms.data)
         break;
       case WSMessageType.CreateRoom:
-        createRoom();
+        // createRoom();
         console.log("room created");
         break;
       case WSMessageType.NewMessage:
-        onNewMessages(jsonContent);
+        onNewMessages(jsonContent.data);
         break;
       case WSMessageType.RequestMessages:
         onRequestMessages(jsonContent.data.data);
-        // setRoomContents(jsonContent.data.data);
-        // console.log("i clicked on a room", jsonContent.data.data);
-        // console.log(roomContents, "rc");
         break;
       default:
         break;
     }
   }
 
-  function createRoom() {
-    const message = {
-      msgType: WSMessageType.CreateRoom,
-      createByUserID: `${userID}`,
-      roomName: "C301",
-      roomIcon: "Image Link. For now we should use a default image of unilag",
-    };
-    socket.current.send(JSON.stringify(message));
-  }
+  // function createRoom() {
+  //   const message = {
+  //     msgType: WSMessageType.CreateRoom,
+  //     createByUserID: `${userID}`,
+  //     roomName: "C301",
+  //     roomIcon: "Unilag logo",
+  //   };
+  //   socket.current.send(JSON.stringify(message));
+  // }
 
   function sendWSMessage(message) {
     socket.current.send(message);
   }
 
   function onNewMessages(messageData) {
-    console.log(messageData);
+    const newRoomContents = [...roomContents, messageData];
+    setRoomContents(newRoomContents);
   }
   function onRequestMessages(messages) {
     const reversedMessages = [...messages].reverse();
     setRoomContents(reversedMessages);
   }
 
+  // console.log(homeData || {});
   return (
     <main>
       {web ? (
         <Conversations
           data={homeData}
           roomContents={roomContents}
-          create={createRoom}
           send={sendWSMessage}
         />
       ) : (
