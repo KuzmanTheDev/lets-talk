@@ -19,14 +19,14 @@ export default function DialogueBox({ roomData, name, sendWSMessage }) {
     }, 100);
   }, [roomData, roomData.length]);
 
-  const loadMoreMessages = () => {
-    const message = {
-      msgType: WSMessageType.RequestMessages,
-      userID: userID,
-      roomID: roomData[0].roomID,
-    };
-    sendWSMessage(JSON.stringify(message));
-  };
+  // const loadMoreMessages = () => {
+  //   const message = {
+  //     msgType: WSMessageType.RequestMessages,
+  //     userID: userID,
+  //     roomID: roomData[0].roomID,
+  //   };
+  //   sendWSMessage(JSON.stringify(message));
+  // };
 
   // const onScroll = (e) => {
   //   if (
@@ -39,7 +39,6 @@ export default function DialogueBox({ roomData, name, sendWSMessage }) {
   //   }
   // };
   // useEffect(()=>{
-
   // })
   return (
     <div className="dialogue-box">
