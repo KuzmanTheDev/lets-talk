@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useRef } from "react";
 import { AuthContext } from "../../../Context/AuthContext";
 import ChatInput from "../ChatInpu/ChatInput";
 import DialogueHeader from "./DialogueHeader/DialogueHeader";
-import { WSMessageType } from "../../../utilities/Constants";
 import "./DialogueBox.css";
 
 export default function DialogueBox({ roomData, name, sendWSMessage }) {
