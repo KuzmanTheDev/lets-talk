@@ -20,7 +20,6 @@ export default function Navigation() {
             className="nav-icon-convo"
           />
           <p className="conversation">Conversations</p>
-          <div className="message-count">6</div>
         </NavLink>
       </div>
 

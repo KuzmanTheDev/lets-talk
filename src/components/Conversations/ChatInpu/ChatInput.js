@@ -26,6 +26,13 @@ export default function ChatInput({ roomID, sendWSMessage }) {
     };
     sendWSMessage(JSON.stringify(message));
     setMessageValue("");
+
+    const message2 = {
+      msgType: WSMessageType.RequestMessages,
+      userID: userID,
+      roomID: roomID,
+    };
+    sendWSMessage(JSON.stringify(message2));
   }
   return (
     <div className="chat__input-wrapper">

@@ -1,8 +1,8 @@
 import React from "react";
 import create from "../../../assets/images/create_room.png";
-import "./Filter.css";
+import "./CreateRoom.css";
 
-export default function Filter({ toggle }) {
+export default function CreateRoom({ toggle }) {
   const onPopup = () => {
     toggle();
   };

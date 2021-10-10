@@ -2,7 +2,7 @@ import React from "react";
 import avatar from "../../../assets/images/recipient-avatar.png";
 import "./ChatPreview.css";
 
-export default function ChatPreview({ roomsInfo, activeChat, roomInfo }) {
+export default function ChatPreview({ roomsInfo, activeChat }) {
   // console.log(roomInfo);
   return (
     <div

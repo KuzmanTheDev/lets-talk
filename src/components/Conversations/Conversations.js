@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import Chats from "./Chats/Chats";
-import Filter from "./Filter/Filter";
+import Filter from "./CreateRoom/CreateRoom";
 import speechBubble from "../../assets/images/speech-bubble.png";
 import Layout from "../AuthorisedLayout/AuthLayout";
 import DialogueBox from "./DialogueBox/DialogueBox";
-import Modal from "../CreateRoom Modal/Modal";
+import Modal from "../CreateRoomModal/Modal";
 import Backdrop from "../Backdrop/Backdrop";
 import "./Conversations.css";
 
-export default function Conversations({ data, create, roomContents, send }) {
+export default function Conversations({ data, roomContents, send, user }) {
   const [convo, setConvo] = useState(null);
   const [roomName, setRoomName] = useState("");
   const [visibility, setVisibility] = useState(false);
@@ -28,7 +28,7 @@ export default function Conversations({ data, create, roomContents, send }) {
     <Layout>
       <div className="conversations">
         <Backdrop visible={visibility}  />
-        <Modal visible={visibility} toggle={toggleVisibility} sendWSMessage={send}/>
+        <Modal visible={visibility} toggle={toggleVisibility} sendWSMessage={send} onRoomName={onRoomName} getChat={onChat}/>
         <div className="filter-block">
           <Filter toggle={toggleVisibility} />
         </div>
@@ -40,6 +40,7 @@ export default function Conversations({ data, create, roomContents, send }) {
               sendWSMessage={send}
               getRoomName={onRoomName}
               roomData={roomContents}
+              user={user}
             />
           </div>
           {convo ? (

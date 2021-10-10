@@ -12,6 +12,7 @@ const ls = new SecureLS();
 export default function Index() {
   const [homeData, setHomeData] = useState({});
   const [roomContents, setRoomContents] = useState([]);
+  const [searchUser, setSearchUser] = useState([]);
   const web = useMediaQuery("(min-width : 776px)");
   const {
     user: { userID, wsTicket },
@@ -29,6 +30,8 @@ export default function Index() {
         })
         .then((res) => {
           setHomeData(res.data.data);
+          console.log(res.data.data, "home");
+          // getChatInfo(res.data.data.roomList.data[0]._id);
         })
         .catch((err) => {
           console.log(err);
@@ -74,7 +77,7 @@ export default function Index() {
     console.log(e);
   }
 
-  function onMessage(e) {
+  const onMessage = (e) => {
     const jsonContent = JSON.parse(e.data);
     console.log(jsonContent, "e");
     switch (jsonContent.msgType) {
@@ -91,34 +94,31 @@ export default function Index() {
       case WSMessageType.RequestMessages:
         onRequestMessages(jsonContent.data.data);
         break;
+      case WSMessageType.SearchUser:
+        console.log("su")
+        setSearchUser(jsonContent.data.data);
+        break;
       default:
         break;
     }
-  }
-
-  // function createRoom() {
-  //   const message = {
-  //     msgType: WSMessageType.CreateRoom,
-  //     createByUserID: `${userID}`,
-  //     roomName: "C301",
-  //     roomIcon: "Unilag logo",
-  //   };
-  //   socket.current.send(JSON.stringify(message));
-  // }
+  };
 
   function sendWSMessage(message) {
     socket.current.send(message);
   }
 
   function onNewMessages(messageData) {
-    const newRoomContents = [...roomContents, messageData];
-    setRoomContents(newRoomContents);
+    // console.log(roomContents, "rc");
+    roomContents.push(messageData);
+    // const newRoomContents = [...roomContents, messageData];
+    // setRoomContents(newRoomContents);
   }
   function onRequestMessages(messages) {
     const reversedMessages = [...messages].reverse();
     setRoomContents(reversedMessages);
+    console.log("req");
   }
-
+  console.log(roomContents, "index");
   // console.log(homeData || {});
   return (
     <main>
@@ -127,6 +127,7 @@ export default function Index() {
           data={homeData}
           roomContents={roomContents}
           send={sendWSMessage}
+          user={searchUser}
         />
       ) : (
         <div>

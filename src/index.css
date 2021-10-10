@@ -1,12 +1,17 @@
 * {
   margin: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 body {
   margin: 0;
   font-family: "Axiforma Regular";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+html {
+  scroll-behavior: smooth;
 }
 
 @font-face {

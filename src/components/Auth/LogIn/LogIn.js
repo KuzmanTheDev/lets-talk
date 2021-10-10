@@ -11,14 +11,15 @@ import * as api from "../../../utilities/API";
 export default function UserDetails() {
   const context = useContext(AuthContext);
   const [values, setValues] = useState({
-    email: "150408002@live.unilag.edu.ng",
-    password: "michaelUti",
+    email: "",
+    password: "",
   });
 
   const [errors, setErrors] = useState({
     email: [],
     password: [],
   });
+  const [APIError, setAPIError] = useState("");
 
   const history = useHistory();
   const previousPage = () => {
@@ -33,6 +34,10 @@ export default function UserDetails() {
       history.push("/chat");
       context.login(userdata);
       console.log(userdata);
+    },
+    onError: (error, variables, context) => {
+      setAPIError(error);
+      console.log(`rolling back optimistic update with id ${error}`);
     },
   });
 
@@ -75,7 +80,7 @@ export default function UserDetails() {
 
         <div className="form-block">
           <h2>Welcome Back!</h2>
-          <p>Blah blah bah </p>
+          <p>Please sign in with your student or work email </p>
 
           <div className="fields-block">
             <div className="field">
@@ -102,6 +107,14 @@ export default function UserDetails() {
                 required
               />
             </div>
+            {APIError ? (
+              <small className="has-error">
+                Something went wrong please try again.
+              </small>
+            ) : null}
+            {APIError.length > 0 ? (
+              <small className="has-error">{APIError}</small>
+            ) : null}
 
             <p>
               <Link
@@ -115,10 +128,30 @@ export default function UserDetails() {
               </Link>
             </p>
           </div>
-
+          {/* {Object.keys(errors).length > 0 && (
+          <div
+            style={{
+              position: "fixed",
+              top: "500px",
+              margin: "10px",
+            }}
+            className="ui error message"
+          >
+            <ul className="list">
+              {Object.values(errors).map((err) => {
+                return <li key={err}>{err}</li>;
+              })}
+            </ul>
+          </div>
+        )} */}
           <Button
             text="Proceed"
             type="primary"
+            disabled={
+              (values.email.trim() && values.password.trim()) === ""
+                ? true
+                : false
+            }
             style={{
               position: "absolute",
               width: "537px",

@@ -1,16 +1,69 @@
 import React, { useContext, useState } from "react";
-import close from "../../assets/images/close.png";
+import SecureLS from "secure-ls";
 import { AuthContext } from "../../Context/AuthContext";
 import { WSMessageType } from "../../utilities/Constants";
-// import { isRequired } from "../../utilities/InputValidators";
+import axios from "../../utilities/axios";
 import Button from "../Button/Button";
+import close from "../../assets/images/close.png";
 import "./Modal.css";
+const ls = new SecureLS();
 
-export default function Modal({ visible, toggle, sendWSMessage }) {
+export default function Modal({
+  visible,
+  toggle,
+  sendWSMessage,
+  onRoomName,
+  getChat,
+}) {
   const [roomName, setRoomName] = useState("");
+  // const [loading, setloading] = useState(false);
+  const [currentRoom, setCurrentRoom] = useState(null);
   const {
     user: { userID },
   } = useContext(AuthContext);
+  const { token } = ls.get("userData");
+
+  const onClose = () => {
+    toggle();
+  };
+  function getChatContent(roomID) {
+    const message = {
+      msgType: WSMessageType.RequestMessages,
+      userID: userID,
+      roomID: roomID,
+      // skip: 8,
+      // limit: 10,
+    };
+    sendWSMessage(JSON.stringify(message));
+    getChat();
+  }
+  const getChatInfo = (id, name) => {
+    getChatContent(id);
+    onRoomName(name);
+    setCurrentRoom(id);
+  };
+
+  const fetchData = async () => {
+    const res = await axios
+      .get("/home", {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+      .then((res) => {
+        console.log(res.data.data, "home");
+        getChatInfo(
+          res.data.data.roomList.data[0]._id,
+          res.data.data.roomList.data[0].roomName
+        );
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    onClose();
+    return res;
+  };
+
   function createRoom() {
     const message = {
       msgType: WSMessageType.CreateRoom,
@@ -19,11 +72,10 @@ export default function Modal({ visible, toggle, sendWSMessage }) {
       roomIcon: "Unilag logo",
     };
     sendWSMessage(JSON.stringify(message));
+    fetchData();
     setRoomName("");
   }
-  const onClose = () => {
-    toggle();
-  };
+
   return (
     <div
       className="create_room-modal"

@@ -1,0 +1,11 @@
+.notification-container {
+  font-size: 14px;
+  box-sizing: border-box;
+  position: fixed;
+}
+.bottom-left {
+  bottom: 12px;
+  left: 12px;
+  transition: transform 0.6s ease-in;
+  animation: toast-in-left 0.7s;
+}

@@ -34,7 +34,7 @@ export default function Layout({
         </div>
         <div className="footer">
           <h5>Unilag Inc. 2021</h5>
-          <p>something blah blah blah</p>
+          <p>Indeed and In truth</p>
         </div>
       </div>
       <div className="right-block">{children}</div>

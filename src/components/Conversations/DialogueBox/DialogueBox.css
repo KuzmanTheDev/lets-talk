@@ -31,9 +31,11 @@
   line-height: 20px;
 }
 .NewInfo {
+  padding: 8px;
   font-size: 10px;
+  font-weight: bolder;
   border: 1px solid rgb(158, 155, 155);
-  border-radius: 3px;
+  border-radius: 25px;
   width: max-content;
   background-color: rgba(221, 229, 230, 0.644);
   margin: 5px auto 10px;
