@@ -2,8 +2,8 @@ import React, { useContext, useEffect, useRef } from "react";
 import { AuthContext } from "../../../Context/AuthContext";
 import ChatInput from "../ChatInpu/ChatInput";
 import DialogueHeader from "./DialogueHeader/DialogueHeader";
-import "./DialogueBox.css";
 import { WSMessageType } from "../../../utilities/Constants";
+import "./DialogueBox.css";
 
 export default function DialogueBox({ roomData, name, sendWSMessage }) {
   const scrollRef = useRef(null);
@@ -28,16 +28,16 @@ export default function DialogueBox({ roomData, name, sendWSMessage }) {
     sendWSMessage(JSON.stringify(message));
   };
 
-  const onScroll = (e) => {
-    if (
-      e.target &&
-      e.target.scrollTop < 100 &&
-      roomData.length > 0 &&
-      roomData[0].index > 1
-    ) {
-      loadMoreMessages();
-    }
-  };
+  // const onScroll = (e) => {
+  //   if (
+  //     e.target &&
+  //     e.target.scrollTop < 100 &&
+  //     roomData.length > 0 &&
+  //     roomData[0].index > 1
+  //   ) {
+  //     loadMoreMessages();
+  //   }
+  // };
   // useEffect(()=>{
 
   // })

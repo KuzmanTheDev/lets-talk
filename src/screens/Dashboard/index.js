@@ -30,7 +30,7 @@ export default function Index() {
         })
         .then((res) => {
           setHomeData(res.data.data);
-          console.log(res.data.data, "home");
+          // console.log(res.data.data, "home");
           // getChatInfo(res.data.data.roomList.data[0]._id);
         })
         .catch((err) => {

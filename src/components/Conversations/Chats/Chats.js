@@ -32,6 +32,7 @@ export default function Chats({
     }, 1000);
 
     return () => clearTimeout(delayDebounceFn);
+      // eslint-disable-next-line
   }, [searchValue, showResult]);
 
   function getChatContent(roomID) {
@@ -98,7 +99,7 @@ export default function Chats({
               width: "50%",
             }}
           >
-            You have no groups
+            You have no chats
           </p>
         )}
       </div>

@@ -17,7 +17,7 @@ export default function Modal({
 }) {
   const [roomName, setRoomName] = useState("");
   // const [loading, setloading] = useState(false);
-  const [currentRoom, setCurrentRoom] = useState(null);
+  // const [currentRoom, setCurrentRoom] = useState(null);
   const {
     user: { userID },
   } = useContext(AuthContext);
