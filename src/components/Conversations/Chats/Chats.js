@@ -4,7 +4,7 @@ import ChatPreview from "../ChatPreview/ChatPreview";
 import search from "../../../assets/images/search.png";
 import "./Chats.css";
 import { AuthContext } from "../../../Context/AuthContext";
-import { useEffect } from "react/cjs/react.development";
+// import { useEffect } from "react/cjs/react.development";
 
 export default function Chats({
   chats,
@@ -22,18 +22,18 @@ export default function Chats({
   const [showResult, setShowResult] = useState(false);
   // const searchInput = useRef("");
 
-  useEffect(() => {
-    if (searchValue.trim().length < 4) return;
-    const delayDebounceFn = setTimeout(() => {
-      console.log(searchValue);
-      setShowResult(!showResult);
-      searchUser();
-      // Send Axios request here
-    }, 1000);
+  // useEffect(() => {
+  //   if (searchValue.trim().length < 4) return;
+  //   const delayDebounceFn = setTimeout(() => {
+  //     console.log(searchValue);
+  //     setShowResult(!showResult);
+  //     searchUser();
+  //     // Send Axios request here
+  //   }, 1000);
 
-    return () => clearTimeout(delayDebounceFn);
-    // eslint-disable-next-line
-  }, [searchValue, showResult]);
+  //   return () => clearTimeout(delayDebounceFn);
+  //   // eslint-disable-next-line
+  // }, [searchValue, showResult]);
 
   function getChatContent(roomID) {
     const message = {
@@ -44,13 +44,13 @@ export default function Chats({
     sendWSMessage(JSON.stringify(message));
     getChat();
   }
-  function searchUser() {
-    const message = {
-      msgType: WSMessageType.SearchUser,
-      searchText: searchValue,
-    };
-    sendWSMessage(JSON.stringify(message));
-  }
+  // function searchUser() {
+  //   const message = {
+  //     msgType: WSMessageType.SearchUser,
+  //     searchText: searchValue,
+  //   };
+  //   sendWSMessage(JSON.stringify(message));
+  // }
 
   const getChatInfo = (id, name) => {
     getChatContent(id);
