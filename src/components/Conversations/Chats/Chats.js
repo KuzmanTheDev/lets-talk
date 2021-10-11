@@ -4,7 +4,6 @@ import ChatPreview from "../ChatPreview/ChatPreview";
 import search from "../../../assets/images/search.png";
 import "./Chats.css";
 import { AuthContext } from "../../../Context/AuthContext";
-// import { useEffect } from "react/cjs/react.development";
 
 export default function Chats({
   chats,
@@ -19,7 +18,7 @@ export default function Chats({
   // console.log(chats?.roomList?.data, "rd");
   const [currentRoom, setCurrentRoom] = useState(null);
   const [searchValue, setSearchValue] = useState("");
-  const [showResult, setShowResult] = useState(false);
+  // const [showResult, setShowResult] = useState(false);
   // const searchInput = useRef("");
 
   // useEffect(() => {
@@ -70,12 +69,12 @@ export default function Chats({
           required
         />
       </div>
-      <div
+      {/* <div
         className="search_results"
         style={{ display: showResult ?  "block" : "none" }}
       >
         {user._id}
-      </div>
+      </div> */}
 
       <div className="chat-preview-block">
         {chats ? (
