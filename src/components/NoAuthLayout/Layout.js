@@ -14,10 +14,10 @@ export default function Layout({ children }) {
         </div>
 
         <div className="content-block">
-          <h2>Content goes here</h2>
+          <h2>UNILAG Let's Talk</h2>
           <p>
-            So doing the Lord's work is a thread that's run through our politics
-            since the very beginning.
+            The web communication platform for students and staff of the
+            University of Lagos.
           </p>
           <div className="socials">
             {/* <a href="/"> */}
