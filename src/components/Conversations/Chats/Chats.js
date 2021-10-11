@@ -32,7 +32,7 @@ export default function Chats({
     }, 1000);
 
     return () => clearTimeout(delayDebounceFn);
-      // eslint-disable-next-line
+    // eslint-disable-next-line
   }, [searchValue, showResult]);
 
   function getChatContent(roomID) {
@@ -72,7 +72,7 @@ export default function Chats({
       </div>
       <div
         className="search_results"
-        style={{ opacity: showResult ? "1" : "0" }}
+        style display: showResult?  "block" : "none" }}
       >
         {user._id}
       </div>
