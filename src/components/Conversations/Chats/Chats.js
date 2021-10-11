@@ -78,7 +78,7 @@ export default function Chats({
       </div>
 
       <div className="chat-preview-block">
-        {chats.length ? (
+        {chats ? (
           chats?.roomList?.data?.map((room, index) => (
             <div
               key={index}

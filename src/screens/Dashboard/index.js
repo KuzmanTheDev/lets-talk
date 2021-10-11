@@ -10,7 +10,7 @@ import { useMediaQuery } from "../../utilities/MediaQuery";
 const ls = new SecureLS();
 
 export default function Index() {
-  const [homeData, setHomeData] = useState({});
+  const [homeData, setHomeData] = useState(null);
   const [roomContents, setRoomContents] = useState([]);
   const [searchUser, setSearchUser] = useState([]);
   const web = useMediaQuery("(min-width : 776px)");
@@ -30,7 +30,7 @@ export default function Index() {
         })
         .then((res) => {
           setHomeData(res.data.data);
-          // console.log(res.data.data, "home");
+          console.log(res.data.data, "home");
           // getChatInfo(res.data.data.roomList.data[0]._id);
         })
         .catch((err) => {
@@ -95,7 +95,7 @@ export default function Index() {
         onRequestMessages(jsonContent.data.data);
         break;
       case WSMessageType.SearchUser:
-        console.log("su")
+        console.log("su");
         setSearchUser(jsonContent.data.data);
         break;
       default:
@@ -131,12 +131,31 @@ export default function Index() {
         />
       ) : (
         <div>
-          <h2 className="convo-title">Conversations</h2>
-          {/* <div className="chat-preview-block">
-            {contacts.map((contact, index) => (
-              <ChatPreview key={index} contact={contact} />
-            ))}
-          </div> */}
+          {/* <h2 className="convo-title">Conversations</h2>
+          {homeData.length ? (
+          homeData?.roomList?.data?.map((room, index) => (
+            <div
+              key={index}
+              onClick={() => {
+                getChatInfo(room._id, room.roomName);
+              }}
+              style={{ cursor: "pointer" }}
+            >
+              <ChatPreview roomsInfo={room} activeChat={currentRoom} />
+            </div>
+          ))
+        ) : (
+          <p
+            style={{
+              position: "absolute",
+              top: "50%",
+              margin: "30px",
+              width: "50%",
+            }}
+          >
+            You have no chats
+          </p>
+        )} */}
           <Footer />
         </div>
       )}

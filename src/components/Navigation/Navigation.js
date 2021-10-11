@@ -41,10 +41,12 @@ export default function Navigation() {
           <img src={cog} alt="Account" className="nav-icon-cog" />
           <p>Account</p>
         </NavLink>
-        <div className="nav-item" onClick={logout}>
-          <img src={logoutIcon} alt="Logout" className="nav-icon-logout" />
-          <p>Log Out</p>
-        </div>
+        <NavLink to="/">
+          <div className="nav-item" onClick={logout}>
+            <img src={logoutIcon} alt="Logout" className="nav-icon-logout" />
+            <p>Log Out</p>
+          </div>
+        </NavLink>
       </div>
     </div>
   );

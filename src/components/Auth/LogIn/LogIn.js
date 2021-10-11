@@ -11,8 +11,8 @@ import * as api from "../../../utilities/API";
 export default function UserDetails() {
   const context = useContext(AuthContext);
   const [values, setValues] = useState({
-    email: "",
-    password: "",
+    email: "150408002@live.unilag.edu.ng",
+    password: "michaelUti",
   });
 
   const [errors, setErrors] = useState({
