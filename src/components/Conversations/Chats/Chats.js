@@ -72,7 +72,7 @@ export default function Chats({
       </div>
       <div
         className="search_results"
-        style display: showResult?  "block" : "none" }}
+        style={{ display: showResult ?  "block" : "none" }}
       >
         {user._id}
       </div>
