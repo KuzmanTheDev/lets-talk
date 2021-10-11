@@ -22,7 +22,7 @@ export default function Layout({
 
         <div className="user-avatar-block">
           <img src={avatar} alt="Avatar" />
-          <p>Michael Uti</p>
+          <p>User Name</p>
         </div>
 
         <div className="nav-block">
