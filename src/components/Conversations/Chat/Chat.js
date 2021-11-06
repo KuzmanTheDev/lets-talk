@@ -7,13 +7,13 @@ import "./Chat.css";
 export default function Chat({ match }) {
   const web = useMediaQuery("(min-width : 776px)");
 
- //TODO: @Michael
-//  const startPeerConnection =()=>{
-// //Start a Videocall 
-// }
-// const joinPeerConnection =()=>{
-//   //Join a videocall request
-// }
+  //TODO: @Michael
+  //  const startPeerConnection =()=>{
+  // //Start a Videocall
+  // }
+  // const joinPeerConnection =()=>{
+  //   //Join a videocall request
+  // }
 
   return (
     <div>
@@ -23,7 +23,7 @@ export default function Chat({ match }) {
         </Conversations>
       ) : (
         <div>
-          <h2>Chat{match.params.id}</h2>
+          <h2>Only available on web for now</h2>
         </div>
       )}
     </div>

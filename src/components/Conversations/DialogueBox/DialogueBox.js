@@ -37,8 +37,6 @@ export default function DialogueBox({ roomData, name, sendWSMessage }) {
   //     loadMoreMessages();
   //   }
   // };
-  // useEffect(()=>{
-  // })
   return (
     <div className="dialogue-box">
       <DialogueHeader roomName={name} />

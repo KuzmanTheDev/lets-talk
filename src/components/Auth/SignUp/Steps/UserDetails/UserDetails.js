@@ -15,7 +15,7 @@ export default function UserDetails({ values, nextStep, onChange }) {
   const previousPage = () => {
     history.goBack();
   };
-  
+
   return (
     <div>
       <div className="top-block">
@@ -84,6 +84,13 @@ export default function UserDetails({ values, nextStep, onChange }) {
             height: "56px",
             top: "652px",
           }}
+          disabled={
+            (values.fullName.trim() &&
+              values.dateOfBirth.trim() &&
+              values.email.trim()) === ""
+              ? true
+              : false
+          }
           onClick={nextStep}
         />
       </div>
@@ -99,6 +106,13 @@ export default function UserDetails({ values, nextStep, onChange }) {
             width: "248px",
             height: "56px",
           }}
+          disabled={
+            (values.fullName.trim() &&
+              values.dateOfBirth.trim() &&
+              values.email.trim()) === ""
+              ? true
+              : false
+          }
           onClick={nextStep}
         />
       </div>

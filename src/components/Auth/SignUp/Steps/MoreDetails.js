@@ -42,7 +42,7 @@ export default function UserDetails({ values, nextStep, prevStep, onChange }) {
             <input
               type="text"
               placeholder="160401107"
-              defaultValue={values.matricOOrIDNumber}
+              defaultValue={values.matricOrIDNumber}
               onChange={onChange("matricOrIDNumber")}
               required
             />
@@ -62,23 +62,22 @@ export default function UserDetails({ values, nextStep, prevStep, onChange }) {
               <option value="Accounting">Accounting</option>
               <option value="Art">Art</option>
             </select>
-            {/* <input
-              type="text"
-              placeholder="okemati@gmail.com"
-              defaultValue={values.faculty}
-              onChange={onChange("faculty")}
-              required
-            /> */}
           </div>
           <div className="field">
             <label>Department</label>
-            <input
-              type="text"
-              placeholder="Civil Engineering"
+            <select
               defaultValue={values.department}
               onChange={onChange("department")}
               required
-            />
+            >
+              <option value="default" disabled>
+                Choose Department...
+              </option>
+              <option value="Civil Engineering">Civil Engineering</option>
+              <option value="Marine Science">Marine Science</option>
+              <option value="Accounting">Accounting</option>
+              <option value="Visual Art">Visual Art</option>
+            </select>
           </div>
           <div className="terms-block">
             <input type="checkbox" required />
@@ -105,6 +104,13 @@ export default function UserDetails({ values, nextStep, prevStep, onChange }) {
             height: "56px",
             top: "652px",
           }}
+          disabled={
+            (values.faculty.trim() &&
+              values.department.trim() &&
+              values.matricOrIDNumber.trim()) === ""
+              ? true
+              : false
+          }
           onClick={nextStep}
         />
       </div>
@@ -120,6 +126,13 @@ export default function UserDetails({ values, nextStep, prevStep, onChange }) {
             width: "248px",
             height: "56px",
           }}
+          disabled={
+            (values.faculty.trim() &&
+              values.department.trim() &&
+              values.matricOrIDNumber.trim()) === ""
+              ? true
+              : false
+          }
           onClick={nextStep}
         />
       </div>

@@ -86,12 +86,12 @@ export default function UserDetails() {
             <div className="field">
               <label>Email</label>
               <input
+                required
                 type="email"
                 placeholder="150408002@live.unilag.edu.ng"
                 defaultValue={values.email}
                 onChange={handleChange("email")}
                 onBlur={() => validate([isRequired, isValidEmail])}
-                required
               />
               {errors.length > 0 ? (
                 <small className="has-error">{errors.join(", ")}</small>
@@ -100,11 +100,11 @@ export default function UserDetails() {
             <div className="field">
               <label>Password</label>
               <input
+                required
                 type="password"
                 placeholder="*************"
                 defaultValue={values.password}
                 onChange={handleChange("password")}
-                required
               />
             </div>
             {APIError ? (
@@ -174,6 +174,11 @@ export default function UserDetails() {
               width: "248px",
               height: "56px",
             }}
+            disabled={
+              (values.email.trim() && values.password.trim()) === ""
+                ? true
+                : false
+            }
             onClick={handleSubmit}
           />
         </div>
